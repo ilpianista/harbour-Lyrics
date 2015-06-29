@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Categories=Audio;
+Icon=harbour-lyrics
+Exec=harbour-lyrics
+Name=Lyrics
+Comment=Music lyrics application
