@@ -25,7 +25,8 @@ PkgConfigBR:
   - Qt5Core
   - Qt5Qml
   - Qt5Quick
-  - Qt5Xml # ChartLyrics
+  - oauth # Genius
+#  - Qt5Xml # ChartLyrics
 #  - Qt5WebKitWidgets # LyricsWiki
 
 # Build dependencies without a pkgconfig setup can be listed here

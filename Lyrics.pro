@@ -4,17 +4,20 @@ CONFIG += sailfishapp
 
 SOURCES += \
     src/main.cpp \
-    src/chartlyricsapi.cpp \
     src/lyricsmanager.cpp \
-    src/lyric.cpp
-#    src/lyricswikiapi.cpp \
+    src/lyric.cpp \
+    src/geniusapi.cpp
+#    src/chartlyricsapi.cpp
+#    src/lyricswikiapi.cpp
 
 HEADERS += \
-    src/chartlyricsapi.h \
     src/lyricsmanager.h \
     src/lyric_p.h \
-    src/lyric.h
-#    src/lyricswikiapi.h \
+    src/lyric.h \
+    src/geniusapi.h \
+    src/geniusapi_secret.h
+#    src/chartlyricsapi.h
+#    src/lyricswikiapi.h
 
 OTHER_FILES += \
     qml/cover/CoverPage.qml \
@@ -33,4 +36,7 @@ TRANSLATIONS += translations/harbour-lyrics-it.ts
 #QT += webkitwidgets
 
 # ChartLyrics
-QT += xml
+#QT += xml
+
+# Genius
+PKGCONFIG += oauth

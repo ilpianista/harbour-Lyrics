@@ -22,23 +22,17 @@
   SOFTWARE.
 */
 
-#include "lyricsmanager.h"
+#ifndef GENIUSAPI_SECRET_H
+#define GENIUSAPI_SECRET_H
 
-#include <QDebug>
+#include <QString>
 
-LyricsManager::LyricsManager(QObject *parent) :
-    QObject(parent)
-{
-}
+// I've not a better idea on how to provide an open source application
+// and hide these at the same time. If you've a better idea please
+// contact me.
 
-LyricsManager::~LyricsManager()
-{
-}
+const static QString CLIENT_ID = QStringLiteral("");
+const static QString CLIENT_SECRET = QStringLiteral("");
+const static QString CLIENT_ACCESS_TOKEN = QStringLiteral("");
 
-void LyricsManager::search(const QString &artist, const QString &song)
-{
-    qDebug() << "Querying Genius";
-    api.getLyric(artist, song);
-
-    connect(&api, SIGNAL(lyricFetched(Lyric*,bool)), this, SIGNAL(searchResult(Lyric*,bool)));
-}
+#endif // GENIUSAPI_SECRET_H
