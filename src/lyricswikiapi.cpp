@@ -70,7 +70,7 @@ void LyricsWikiAPI::getLyricBypassApi(const QString &artist, const QString &song
 
     Lyric* lyric = new Lyric();
     lyric->setArtist(artist);
-    lyric->setTitle(song);
+    lyric->setSong(song);
     lyrics.insert(reply, lyric);
 
     connect(reply, &QNetworkReply::finished, this, &LyricsWikiAPI::onGetLyricPageResult);
@@ -118,7 +118,7 @@ void LyricsWikiAPI::onGetLyricResult()
             if (jsonObj.value("lyrics").toString() != QStringLiteral("Not found")) {
                 lyric = new Lyric();
                 lyric->setArtist(jsonObj.value("artist").toString());
-                lyric->setTitle(jsonObj.value("song").toString());
+                lyric->setSong(jsonObj.value("song").toString());
 
                 const QUrl url(jsonObj.value("url").toString());
                 getLyricText(url, lyric);

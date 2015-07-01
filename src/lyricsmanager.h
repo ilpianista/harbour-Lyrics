@@ -28,7 +28,7 @@
 #include <QObject>
 #include <QString>
 
-#include "chartlyricsapi.h"
+#include "lyricswikiapi.h"
 #include "lyric.h"
 
 class LyricsManager : public QObject
@@ -44,7 +44,7 @@ Q_SIGNALS:
     void searchResult(Lyric *lyric, const bool &found);
 
 private:
-    ChartLyricsAPI api;
+    LyricsWikiAPI api;
 
 };
 
