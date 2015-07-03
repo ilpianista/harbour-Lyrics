@@ -4,27 +4,27 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="56"/>
+        <location filename="../qml/pages/MainPage.qml" line="58"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="72"/>
+        <location filename="../qml/pages/MainPage.qml" line="74"/>
         <source>Lyrics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="79"/>
+        <location filename="../qml/pages/MainPage.qml" line="81"/>
         <source>Artist</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="85"/>
+        <location filename="../qml/pages/MainPage.qml" line="90"/>
         <source>Song</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="96"/>
+        <location filename="../qml/pages/MainPage.qml" line="104"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>

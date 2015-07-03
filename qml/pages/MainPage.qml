@@ -79,12 +79,18 @@ Page {
                 width: parent.width
                 focus: true
                 placeholderText: qsTr("Artist")
+
+                EnterKey.enabled: text.length > 0 && song.text.length > 0
+                EnterKey.onClicked: searchLyric();
             }
 
             TextField {
                 id: song
                 width: parent.width
                 placeholderText: qsTr("Song")
+
+                EnterKey.enabled: text.length > 0 && artist.text.length > 0
+                EnterKey.onClicked: searchLyric();
             }
 
             BusyIndicator {
@@ -99,14 +105,8 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 onClicked: {
-                    if (artist.text.length !== 0 && song.text.length !== 0) {
-                        songText.text = "";
-                        artist.enabled = false;
-                        song.enabled = false;
-                        busy.visible = true;
-                        busy.running = true;
-                        search.enabled = false;
-                        manager.search(artist.text, song.text);
+                    if (artist.text.length > 0 && song.text.length > 0) {
+                        searchLyric();
                     }
                 }
             }
@@ -120,5 +120,15 @@ Page {
         }
 
         VerticalScrollDecorator {}
+    }
+
+    function searchLyric() {
+        songText.text = "";
+        artist.enabled = false;
+        song.enabled = false;
+        busy.visible = true;
+        busy.running = true;
+        search.enabled = false;
+        manager.search(artist.text, song.text);
     }
 }
