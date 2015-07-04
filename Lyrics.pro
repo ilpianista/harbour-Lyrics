@@ -6,15 +6,15 @@ SOURCES += \
     src/main.cpp \
     src/lyricsmanager.cpp \
     src/lyric.cpp \
-    src/chartlyricsapi.cpp
-#    src/lyricswikiapi.cpp
+    src/lyricswikiapi.cpp
+#    src/chartlyricsapi.cpp
 
 HEADERS += \
     src/lyricsmanager.h \
     src/lyric_p.h \
     src/lyric.h \
-    src/chartlyricsapi.h
-#    src/lyricswikiapi.h
+    src/lyricswikiapi.h
+#    src/chartlyricsapi.h
 
 OTHER_FILES += \
     qml/cover/CoverPage.qml \
@@ -30,7 +30,7 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-lyrics-it.ts
 
 # LyricsWiki
-# QT += webkitwidgets
+QT += webkitwidgets
 
 # ChartLyrics
-QT += xml
+#QT += xml

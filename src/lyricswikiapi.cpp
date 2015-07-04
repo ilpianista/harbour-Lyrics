@@ -104,15 +104,14 @@ void LyricsWikiAPI::onGetLyricResult()
 {
     QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
 
-    bool err = false;
+    bool err = true;
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric";
-        err = true;
     } else {
         QJsonDocument json = QJsonDocument::fromJson(reply->readAll());
         if (!json.isNull()) {
-            qDebug() << "Got lyric:\n" << json;
+            qDebug() << "Got lyric JSON";
 
             QJsonObject jsonObj = json.object();
 
@@ -123,18 +122,17 @@ void LyricsWikiAPI::onGetLyricResult()
 
                 const QUrl url(jsonObj.value("url").toString());
                 getLyricText(url, lyric);
+                err = false;
             } else {
                 qDebug() << "No lyric found";
-                err = true;
             }
         } else {
             qCritical() << "Got an invalid JSON!";
-            err = true;
         }
     }
 
     if (err) {
-        emit lyricFetched(0, false);
+        emit lyricFetched(0, !err);
     }
 
     reply->deleteLater();
@@ -157,8 +155,13 @@ void LyricsWikiAPI::onGetLyricPageResult()
         QWebElement lyricbox = page.mainFrame()->findFirstElement("div[class=lyricbox]");
 
         if (lyricbox.isNull()) {
-            qCritical() << "Cannot parse HTML page";
+            qCritical() << "Cannot find lyric text in HTML page";
         } else {
+            // Remove the <script> tags
+            Q_FOREACH (QWebElement script, lyricbox.findAll(QStringLiteral("script"))) {
+                script.removeFromDocument();
+            }
+
             lyric = lyrics.take(reply);
 
             if (!lyric) {
@@ -171,6 +174,7 @@ void LyricsWikiAPI::onGetLyricPageResult()
         }
     }
 
+    qDebug() << "Lyric found:" << found;
     emit lyricFetched(lyric, found);
 
     reply->deleteLater();
