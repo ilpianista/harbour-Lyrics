@@ -63,8 +63,9 @@ void LyricsWikiAPI::getLyricBypassApi(const QString &artist, const QString &song
     QString songNoSpaces(song);
     songNoSpaces.replace(QChar::Space, "_");
 
-    url.setPath(artNoSpaces + QChar::fromLatin1(':') + songNoSpaces);
+    url.setPath(QChar::fromLatin1('/') + artNoSpaces + QChar::fromLatin1(':') + songNoSpaces);
 
+    qDebug() << "Requesting lyric page" << url;
     QNetworkRequest req(url);
     QNetworkReply* reply = network->get(req);
 
@@ -103,11 +104,11 @@ void LyricsWikiAPI::onGetLyricResult()
 {
     QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
 
-    bool found = false;
-    Lyric* lyric;
+    bool err = false;
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric";
+        err = true;
     } else {
         QJsonDocument json = QJsonDocument::fromJson(reply->readAll());
         if (!json.isNull()) {
@@ -115,8 +116,8 @@ void LyricsWikiAPI::onGetLyricResult()
 
             QJsonObject jsonObj = json.object();
 
-            if (jsonObj.value("lyrics").toString() != QStringLiteral("Not found")) {
-                lyric = new Lyric();
+            if (jsonObj.value("lyrics").toString().compare(QStringLiteral("Not found")) != 0) {
+                Lyric* lyric = new Lyric();
                 lyric->setArtist(jsonObj.value("artist").toString());
                 lyric->setSong(jsonObj.value("song").toString());
 
@@ -124,14 +125,16 @@ void LyricsWikiAPI::onGetLyricResult()
                 getLyricText(url, lyric);
             } else {
                 qDebug() << "No lyric found";
+                err = true;
             }
         } else {
             qCritical() << "Got an invalid JSON!";
+            err = true;
         }
     }
 
-    if (!found) {
-        emit lyricFetched(lyric, found);
+    if (err) {
+        emit lyricFetched(0, false);
     }
 
     reply->deleteLater();
@@ -142,26 +145,27 @@ void LyricsWikiAPI::onGetLyricPageResult()
     QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
 
     bool found = false;
-    Lyric* lyric;
+    Lyric* lyric = 0;
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric";
     } else {
         QWebPage page;
         page.mainFrame()->setHtml(reply->readAll());
-        QWebElement parse = page.mainFrame()->documentElement();
-        QWebElement result = parse.findFirst("div[class=lyricbox]");
+        QWebElement lyricbox = page.mainFrame()->findFirstElement("div[class=lyricbox]");
 
-        lyric = lyrics.value(reply);
-        if (!lyric) {
-            qCritical() << "Got an invalid lyric object!";
+        if (lyricbox.isNull()) {
+            qCritical() << "Cannot parse HTML page";
         } else {
-            qDebug() << result.toPlainText();
+            lyric = lyrics.take(reply);
 
-            lyric->setText(result.toPlainText());
-            lyrics.remove(reply);
+            if (!lyric) {
+                qCritical() << "Got an invalid lyric object!";
+            } else {
+                lyric->setText(lyricbox.toPlainText());
 
-            found = true;
+                found = true;
+            }
         }
     }
 

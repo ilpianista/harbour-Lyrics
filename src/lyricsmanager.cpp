@@ -38,7 +38,7 @@ LyricsManager::~LyricsManager()
 void LyricsManager::search(const QString &artist, const QString &song)
 {
     qDebug() << "Querying LyricsWiki";
-    api.getLyric(artist, song);
+    api.getLyricBypassApi(artist, song);
 
     connect(&api, SIGNAL(lyricFetched(Lyric*,bool)), this, SIGNAL(searchResult(Lyric*,bool)));
 }
