@@ -151,6 +151,8 @@ void LyricsWikiAPI::onGetLyricPageResult()
         qCritical() << "Cannot fetch lyric";
     } else {
         QWebPage page;
+        page.settings()->setAttribute(QWebSettings::AutoLoadImages, false);
+        page.settings()->setAttribute(QWebSettings::JavascriptEnabled, false);
         page.mainFrame()->setHtml(reply->readAll());
         QWebElement lyricbox = page.mainFrame()->findFirstElement("div[class=lyricbox]");
 
