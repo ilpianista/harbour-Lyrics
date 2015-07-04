@@ -59,6 +59,7 @@ Page {
 
                 onClicked: {
                     artist.text = "";
+                    artist.forceActiveFocus();
                     song.text = "";
                     songText.text = "";
                 }

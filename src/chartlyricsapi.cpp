@@ -68,7 +68,7 @@ void ChartLyricsAPI::onGetLyricResult()
     QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
 
     bool found = false;
-    Lyric* lyric;
+    Lyric* lyric = 0;
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric";
@@ -77,8 +77,6 @@ void ChartLyricsAPI::onGetLyricResult()
         QString errorMsg;
         xml.setContent(reply->readAll(), &errorMsg);
         if (errorMsg.isEmpty()) {
-            qDebug() << "Got lyric:\n" << xml.toString();
-
             QDomNodeList results = xml.elementsByTagName(QStringLiteral("GetLyricResult"));
             if (!results.isEmpty()) {
                 QDomNode res = results.at(0);
@@ -89,6 +87,8 @@ void ChartLyricsAPI::onGetLyricResult()
 
                 const QString text = res.namedItem(QStringLiteral("Lyric")).toElement().text();
                 if (!text.isEmpty()) {
+                    qDebug() << "Got lyric text";
+
                     lyric->setText(text);
                     found = true;
                 }

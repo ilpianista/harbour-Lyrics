@@ -1,5 +1,7 @@
-* Wed Jul 01 2015 Andrea Scarpino <me@andreascarpino.it> 0.2-1
+* Sat Jul 04 2015 Andrea Scarpino <me@andreascarpino.it> 0.2-1
 - Switch to LyricsWiki.
+
+* Sat Jul 04 2015 Andrea Scarpino <me@andreascarpino.it> 0.1.1-1
 - Landscape support.
 - Provides search action by pressing enter.
 
