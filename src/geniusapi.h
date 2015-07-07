@@ -22,23 +22,37 @@
   SOFTWARE.
 */
 
-#include "lyricsmanager.h"
+#ifndef GENIUSAPI_H
+#define GENIUSAPI_H
 
-#include <QDebug>
+#include <QMap>
+#include <QObject>
+#include <QString>
 
-LyricsManager::LyricsManager(QObject *parent) :
-    QObject(parent)
+class Lyric;
+class QNetworkAccessManager;
+class QNetworkReply;
+class QUrl;
+
+class GeniusAPI : public QObject
 {
-}
+    Q_OBJECT
+public:
+    explicit GeniusAPI(QObject *parent = 0);
+    virtual ~GeniusAPI();
 
-LyricsManager::~LyricsManager()
-{
-}
+    void getLyric(const QString &artist, const QString &song);
 
-void LyricsManager::search(const QString &artist, const QString &song)
-{
-    qDebug() << "Querying Genius";
-    api.getLyric(artist, song);
+Q_SIGNALS:
+    void lyricFetched(Lyric *lyric, const bool &found);
 
-    connect(&api, SIGNAL(lyricFetched(Lyric*,bool)), this, SIGNAL(searchResult(Lyric*,bool)));
-}
+private:
+    void onGetLyricResult();
+    void onGetLyricPageResult();
+    void getLyricText(const QUrl &url, Lyric *lyric);
+
+    QNetworkAccessManager *network;
+    QMap<QNetworkReply*, Lyric*> lyrics;
+};
+
+#endif // GENIUSAPI_H
