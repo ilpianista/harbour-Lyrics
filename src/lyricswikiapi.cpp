@@ -40,7 +40,7 @@
 const static QString API_URL = QStringLiteral("http://lyrics.wikia.com/api.php");
 
 LyricsWikiAPI::LyricsWikiAPI(QObject *parent) :
-    QObject(parent)
+    Provider(parent)
   , network(new QNetworkAccessManager(this))
 {
 }
@@ -182,7 +182,7 @@ void LyricsWikiAPI::onGetLyricPageResult()
 
 void LyricsWikiAPI::getLyricText(const QUrl &url, Lyric *lyric)
 {
-    qDebug() << "Requesting lyric page" << url;
+    qDebug() << "Requesting lyric page" << url.url();
     QNetworkRequest req(url);
     QNetworkReply* reply = network->get(req);
     lyrics.insert(reply, lyric);

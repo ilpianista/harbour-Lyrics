@@ -24,21 +24,73 @@
 
 #include "lyricsmanager.h"
 
+#include <QCoreApplication>
 #include <QDebug>
+#include <QSettings>
+
+#include "chartlyricsapi.h"
+#include "geniusapi.h"
+#include "lyricswikiapi.h"
+#include "provider.h"
 
 LyricsManager::LyricsManager(QObject *parent) :
     QObject(parent)
+  , api(0)
 {
+    settings = new QSettings("it.andreascarpino", QCoreApplication::applicationName(), this);
+
+    setProvider(settings->property("Provider").toString());
 }
 
 LyricsManager::~LyricsManager()
 {
+    delete settings;
+    delete api;
+}
+
+QString LyricsManager::getProvider() const
+{
+    QString provider;
+
+    const QString className = api->metaObject()->className();
+    if (className.compare(QStringLiteral("ChartLyricsAPI")) == 0) {
+        provider = "ChartLyrics";
+    } else if (className.compare(QStringLiteral("Genius")) == 0) {
+        provider = "Genius";
+    } else {
+        provider = "LyricsWiki";
+    }
+
+    qDebug() << "Default provider is" << provider;
+    return provider;
+}
+
+void LyricsManager::setProvider(const QString &provider)
+{
+    if (api) {
+        delete api;
+    }
+
+    QString p;
+    if (provider.compare(QStringLiteral("ChartLyrics")) == 0) {
+        api = new ChartLyricsAPI;
+        p = QStringLiteral("ChartLyrics");
+    } else if (provider.compare(QStringLiteral("Genius")) == 0) {
+        api = new GeniusAPI;
+        p = QStringLiteral("Genius");
+    } else {
+        api = new LyricsWikiAPI;
+        p = QStringLiteral("LyricsWiki");
+    }
+
+    qDebug() << "Setting default provider to" << p;
+    settings->setProperty("Provider", p);
 }
 
 void LyricsManager::search(const QString &artist, const QString &song)
 {
-    qDebug() << "Querying Genius";
-    api.getLyric(artist, song);
+    qDebug() << "Querying" << api->metaObject()->className();
+    api->getLyric(artist, song);
 
-    connect(&api, SIGNAL(lyricFetched(Lyric*,bool)), this, SIGNAL(searchResult(Lyric*,bool)));
+    connect(api, SIGNAL(lyricFetched(Lyric*,bool)), this, SIGNAL(searchResult(Lyric*,bool)));
 }

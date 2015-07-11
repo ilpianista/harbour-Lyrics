@@ -42,7 +42,7 @@
 const static QString API_URL = QStringLiteral("https://api.genius.com");
 
 GeniusAPI::GeniusAPI(QObject *parent) :
-    QObject(parent)
+    Provider(parent)
   , network(new QNetworkAccessManager(this))
 {
 }
@@ -66,8 +66,19 @@ void GeniusAPI::getLyric(const QString &artist, const QString &song)
 
     QNetworkRequest req(url);
 
+    if (CLIENT_ID[0] == '\0') {
+        qCritical() << "No client id set, the request will be rejected!";
+    }
     req.setRawHeader(QByteArray("client_id"), QByteArray(CLIENT_ID));
+
+    if (CLIENT_SECRET[0] == '\0') {
+        qCritical() << "No client secret set, the request will be rejected!";
+    }
     req.setRawHeader(QByteArray("client_secret"), QByteArray(CLIENT_SECRET));
+
+    if (CLIENT_ACCESS_TOKEN[0] == '\0') {
+        qCritical() << "No client access token set, the request will be rejected!";
+    }
     req.setRawHeader(QByteArray("Authorization"), QStringLiteral("Bearer %1").arg(CLIENT_ACCESS_TOKEN).toLatin1());
 
     QNetworkReply* reply = network->get(req);
@@ -104,6 +115,8 @@ void GeniusAPI::onGetLyricResult()
                     getLyricText(url, lyric);
 
                     err = false;
+                } else {
+                    qDebug() << "No results";
                 }
             } else {
                 qDebug() << "No results";
@@ -160,7 +173,7 @@ void GeniusAPI::onGetLyricPageResult()
 
 void GeniusAPI::getLyricText(const QUrl &url, Lyric *lyric)
 {
-    qDebug() << "Requesting lyric page" << url;
+    qDebug() << "Requesting lyric page" << url.url();
     QNetworkRequest req(url);
     QNetworkReply* reply = network->get(req);
     lyrics.insert(reply, lyric);

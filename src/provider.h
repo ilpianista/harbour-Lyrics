@@ -22,35 +22,28 @@
   SOFTWARE.
 */
 
-#ifndef LYRICSMANAGER_H
-#define LYRICSMANAGER_H
+#ifndef PROVIDER_H
+#define PROVIDER_H
 
 #include <QObject>
 #include <QString>
 
 #include "lyric.h"
 
-class QSettings;
-class Provider;
-
-class LyricsManager : public QObject
+class Provider : public QObject
 {
     Q_OBJECT
 public:
-    explicit LyricsManager(QObject *parent = 0);
-    virtual ~LyricsManager();
+    virtual ~Provider();
 
-    Q_INVOKABLE QString getProvider() const;
-    Q_INVOKABLE void search(const QString &artist, const QString &song);
-    Q_INVOKABLE void setProvider(const QString &provider);
+    virtual void getLyric(const QString &artist, const QString &song) = 0;
+
+protected:
+    Provider(QObject *parent = 0);
 
 Q_SIGNALS:
-    void searchResult(Lyric *lyric, const bool &found);
-
-private:
-    QSettings *settings;
-    Provider *api;
+    void lyricFetched(Lyric *lyric, const bool &found);
 
 };
 
-#endif // LYRICSMANAGER_H
+#endif // PROVIDER_H

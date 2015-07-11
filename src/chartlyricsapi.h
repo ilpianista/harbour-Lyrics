@@ -25,14 +25,13 @@
 #ifndef CHARTLYRICSAPI_H
 #define CHARTLYRICSAPI_H
 
-#include <QObject>
 #include <QString>
 
-class Lyric;
-class QNetworkAccessManager;
-class QNetworkReply;
+#include "provider.h"
 
-class ChartLyricsAPI : public QObject
+class QNetworkAccessManager;
+
+class ChartLyricsAPI : public Provider
 {
     Q_OBJECT
 public:

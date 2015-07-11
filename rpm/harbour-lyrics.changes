@@ -1,3 +1,7 @@
+* Sat Jul 11 2015 Andrea Scarpino <me@andreascarpino.it> 0.3-1
+- Allow to switch between lyric providers.
+- Add Genius.com support.
+
 * Sat Jul 04 2015 Andrea Scarpino <me@andreascarpino.it> 0.2-1
 - Switch to LyricsWiki.
 

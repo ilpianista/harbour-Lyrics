@@ -26,15 +26,15 @@
 #define LYRICSWIKIAPI_H
 
 #include <QMap>
-#include <QObject>
 #include <QString>
 
-class Lyric;
+#include "provider.h"
+
 class QNetworkAccessManager;
 class QNetworkReply;
 class QUrl;
 
-class LyricsWikiAPI : public QObject
+class LyricsWikiAPI : public Provider
 {
     Q_OBJECT
 public:

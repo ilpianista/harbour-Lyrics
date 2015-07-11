@@ -12,7 +12,8 @@ License: MIT
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
-  Music lyrics application
+  Music lyrics application.
+  It does support: ChartLyrics, LiricsWiki, Genius.
 Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution
@@ -26,7 +27,7 @@ PkgConfigBR:
   - Qt5Qml
   - Qt5Quick
   - Qt5WebKitWidgets # LyricsWiki, Genius
-#  - Qt5Xml # ChartLyrics
+  - Qt5Xml # ChartLyrics
 
 # Build dependencies without a pkgconfig setup can be listed here
 # PkgBR:

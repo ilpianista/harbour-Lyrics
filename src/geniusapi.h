@@ -26,15 +26,15 @@
 #define GENIUSAPI_H
 
 #include <QMap>
-#include <QObject>
 #include <QString>
 
-class Lyric;
+#include "provider.h"
+
 class QNetworkAccessManager;
 class QNetworkReply;
 class QUrl;
 
-class GeniusAPI : public QObject
+class GeniusAPI : public Provider
 {
     Q_OBJECT
 public:

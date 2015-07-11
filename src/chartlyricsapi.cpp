@@ -37,7 +37,7 @@
 const static QString API_URL = QStringLiteral("http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect");
 
 ChartLyricsAPI::ChartLyricsAPI(QObject *parent) :
-    QObject(parent)
+    Provider(parent)
   , network(new QNetworkAccessManager(this))
 {
 }

@@ -26,10 +26,12 @@ BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt5WebKitWidgets)
+BuildRequires:  pkgconfig(Qt5Xml)
 BuildRequires:  desktop-file-utils
 
 %description
-Music lyrics application
+Music lyrics application.
+It does support: ChartLyrics, LiricsWiki, Genius.
 
 
 %prep
