@@ -30,7 +30,6 @@ Page {
     allowedOrientations: Orientation.All
 
     Column {
-        x: Theme.horizontalPageMargin
         width: parent.width
 
         PageHeader {

@@ -37,7 +37,7 @@
 <context>
     <name>Settings</name>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="37"/>
+        <location filename="../qml/pages/Settings.qml" line="36"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
