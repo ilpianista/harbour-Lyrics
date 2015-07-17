@@ -78,7 +78,14 @@ Page {
             width: parent.width - Theme.horizontalPageMargin * 2
 
             PageHeader {
-                title: qsTr("Lyrics")
+                title: "Lyrics"
+            }
+
+            Label {
+                id: poweredBy
+                width: parent.width
+                font.pixelSize: Theme.fontSizeTiny
+                horizontalAlignment: Text.AlignRight
             }
 
             TextField {
@@ -137,5 +144,11 @@ Page {
         busy.running = true;
         search.enabled = false;
         manager.search(artist.text, song.text);
+    }
+
+    onStatusChanged: {
+        if (status === PageStatus.Active) {
+            poweredBy.text = qsTr("Powered by %1").arg(manager.getProvider());
+        }
     }
 }

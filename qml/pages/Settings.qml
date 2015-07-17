@@ -39,7 +39,7 @@ Page {
         ComboBox {
             id: provider
             width: parent.width
-            label: "Provider"
+            label: qsTr("Provider")
 
             menu: ContextMenu {
 

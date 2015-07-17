@@ -39,7 +39,7 @@ LyricsManager::LyricsManager(QObject *parent) :
 {
     settings = new QSettings("it.andreascarpino", QCoreApplication::applicationName(), this);
 
-    setProvider(settings->property("Provider").toString());
+    setProvider(settings->value("Provider").toString());
 }
 
 LyricsManager::~LyricsManager()
@@ -55,7 +55,7 @@ QString LyricsManager::getProvider() const
     const QString className = api->metaObject()->className();
     if (className.compare(QStringLiteral("ChartLyricsAPI")) == 0) {
         provider = "ChartLyrics";
-    } else if (className.compare(QStringLiteral("Genius")) == 0) {
+    } else if (className.compare(QStringLiteral("GeniusAPI")) == 0) {
         provider = "Genius";
     } else {
         provider = "LyricsWiki";
@@ -84,7 +84,7 @@ void LyricsManager::setProvider(const QString &provider)
     }
 
     qDebug() << "Setting default provider to" << p;
-    settings->setProperty("Provider", p);
+    settings->setValue("Provider", p);
 }
 
 void LyricsManager::search(const QString &artist, const QString &song)
