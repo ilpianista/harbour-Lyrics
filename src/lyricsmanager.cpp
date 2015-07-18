@@ -30,6 +30,7 @@
 
 #include "chartlyricsapi.h"
 #include "geniusapi.h"
+#include "lyricsmaniaapi.h"
 #include "lyricswikiapi.h"
 #include "provider.h"
 
@@ -57,6 +58,8 @@ QString LyricsManager::getProvider() const
         provider = "ChartLyrics";
     } else if (className.compare(QStringLiteral("GeniusAPI")) == 0) {
         provider = "Genius";
+    } else if (className.compare(QStringLiteral("LyricsManiaAPI")) == 0) {
+        provider = "LyricsMania";
     } else {
         provider = "LyricsWiki";
     }
@@ -78,6 +81,9 @@ void LyricsManager::setProvider(const QString &provider)
     } else if (provider.compare(QStringLiteral("Genius")) == 0) {
         api = new GeniusAPI;
         p = QStringLiteral("Genius");
+    } else if (provider.compare(QStringLiteral("LyricsMania")) == 0) {
+        api = new LyricsManiaAPI;
+        p = QStringLiteral("LyricsMania");
     } else {
         api = new LyricsWikiAPI;
         p = QStringLiteral("LyricsWiki");

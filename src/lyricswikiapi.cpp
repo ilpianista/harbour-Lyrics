@@ -59,9 +59,9 @@ void LyricsWikiAPI::getLyricBypassApi(const QString &artist, const QString &song
     QUrl url(QStringLiteral("http://lyrics.wikia.com"));
 
     QString artNoSpaces(artist);
-    artNoSpaces.replace(QChar::Space, "_");
+    artNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
     QString songNoSpaces(song);
-    songNoSpaces.replace(QChar::Space, "_");
+    songNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
 
     url.setPath(QChar::fromLatin1('/') + artNoSpaces + QChar::fromLatin1(':') + songNoSpaces);
 
@@ -83,9 +83,9 @@ void LyricsWikiAPI::getLyric(const QString &artist, const QString &song)
     QUrl url(API_URL);
 
     QString artNoSpaces(artist);
-    artNoSpaces.replace(QChar::Space, "_");
+    artNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
     QString songNoSpaces(song);
-    songNoSpaces.replace(QChar::Space, "_");
+    songNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
 
     QUrlQuery query;
     query.addQueryItem(QStringLiteral("func"), QStringLiteral("getSong"));

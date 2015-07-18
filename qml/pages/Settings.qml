@@ -52,6 +52,10 @@ Page {
                 }
 
                 MenuItem {
+                    text: "LyricsMania"
+                }
+
+                MenuItem {
                     text: "LyricsWiki"
                 }
             }
@@ -64,8 +68,10 @@ Page {
             provider.currentIndex = 0;
         } else if (api === "Genius") {
             provider.currentIndex = 1;
-        } else {
+        } else if (api === "LyricsMania") {
             provider.currentIndex = 2;
+        } else {
+            provider.currentIndex = 3;
         }
     }
 
@@ -74,7 +80,8 @@ Page {
             switch (provider.currentIndex) {
             case 0: manager.setProvider("ChartLyrics"); break;
             case 1: manager.setProvider("Genius"); break;
-            case 2:
+            case 2: manager.setProvider("LyricsMania"); break;
+            case 3:
             default: manager.setProvider("LyricsWiki");
             }
         }

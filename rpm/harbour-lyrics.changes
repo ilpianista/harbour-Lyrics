@@ -1,3 +1,6 @@
+* Sat Jul 18 2015 Andrea Scarpino <me@andreascarpino.it> 0.4-1
+- Add LyricsMania
+
 * Fri Jul 17 2015 Andrea Scarpino <me@andreascarpino.it> 0.3.1-1
 - Display current provider in main window.
 - Fix settings not being saved.
