@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[lyrics-harbour.harbour-lyricsts]
+file_filter = translations/harbour-lyrics-<lang>.ts
+source_file = translations/harbour-lyrics.ts
+source_lang = en
+type = QT
+
