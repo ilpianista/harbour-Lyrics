@@ -1,50 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0'?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS language="it" version="2.1">
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="64"/>
+        <location line="64" filename="../qml/pages/MainPage.qml"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulisci</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="58"/>
+        <location line="58" filename="../qml/pages/MainPage.qml"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="151"/>
+        <location line="151" filename="../qml/pages/MainPage.qml"/>
         <source>Powered by %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="95"/>
+        <location line="95" filename="../qml/pages/MainPage.qml"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Artista</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="104"/>
+        <location line="104" filename="../qml/pages/MainPage.qml"/>
         <source>Song</source>
-        <translation type="unfinished"></translation>
+        <translation>Brano</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="118"/>
+        <location line="118" filename="../qml/pages/MainPage.qml"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca</translation>
     </message>
 </context>
 <context>
     <name>Settings</name>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="36"/>
+        <location line="36" filename="../qml/pages/Settings.qml"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Impostazioni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="42"/>
+        <location line="42" filename="../qml/pages/Settings.qml"/>
         <source>Provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Servizio</translation>
     </message>
 </context>
 </TS>
