@@ -100,7 +100,7 @@ void ChartLyricsAPI::onGetLyricResult()
         }
     }
 
-    emit lyricFetched(lyric, found);
+    Q_EMIT lyricFetched(lyric, found);
 
     reply->deleteLater();
 }

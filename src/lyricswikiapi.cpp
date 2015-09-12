@@ -132,7 +132,7 @@ void LyricsWikiAPI::onGetLyricResult()
     }
 
     if (err) {
-        emit lyricFetched(0, !err);
+        Q_EMIT lyricFetched(0, !err);
     }
 
     reply->deleteLater();
@@ -175,7 +175,7 @@ void LyricsWikiAPI::onGetLyricPageResult()
     }
 
     qDebug() << "Lyric found:" << found;
-    emit lyricFetched(lyric, found);
+    Q_EMIT lyricFetched(lyric, found);
 
     reply->deleteLater();
 }

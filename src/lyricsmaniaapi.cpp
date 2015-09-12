@@ -108,7 +108,7 @@ void LyricsManiaAPI::onGetLyricPageResult()
     }
 
     qDebug() << "Lyric found:" << found;
-    emit lyricFetched(lyric, found);
+    Q_EMIT lyricFetched(lyric, found);
 
     reply->deleteLater();
 }
