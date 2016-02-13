@@ -52,9 +52,9 @@ LyricsWikiAPI::~LyricsWikiAPI()
     delete network;
 }
 
-void LyricsWikiAPI::getLyricBypassApi(const QString &artist, const QString &song)
+void LyricsWikiAPI::getLyric(const QString &artist, const QString &song)
 {
-    qDebug() << "Requesting lyric bypassing APIs for artist" << artist << ", song" << song;
+    qDebug() << "Requesting lyric for artist" << artist << ", song" << song;
 
     QUrl url(QStringLiteral("http://lyrics.wikia.com"));
 
@@ -74,71 +74,10 @@ void LyricsWikiAPI::getLyricBypassApi(const QString &artist, const QString &song
     lyric->setSong(song);
     lyrics.insert(reply, lyric);
 
-    connect(reply, &QNetworkReply::finished, this, &LyricsWikiAPI::onGetLyricPageResult);
-}
-
-void LyricsWikiAPI::getLyric(const QString &artist, const QString &song)
-{
-    qDebug() << "Requesting lyric for artist" << artist << ", song" << song;
-    QUrl url(API_URL);
-
-    QString artNoSpaces(artist);
-    artNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
-    QString songNoSpaces(song);
-    songNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
-
-    QUrlQuery query;
-    query.addQueryItem(QStringLiteral("func"), QStringLiteral("getSong"));
-    query.addQueryItem(QStringLiteral("artist"), artNoSpaces);
-    query.addQueryItem(QStringLiteral("song"), songNoSpaces);
-    query.addQueryItem(QStringLiteral("fmt"), QStringLiteral("realjson"));
-    url.setQuery(query);
-
-    QNetworkRequest req(url);
-    QNetworkReply* reply = network->get(req);
-
     connect(reply, &QNetworkReply::finished, this, &LyricsWikiAPI::onGetLyricResult);
 }
 
 void LyricsWikiAPI::onGetLyricResult()
-{
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
-
-    bool err = true;
-
-    if (reply->error() != QNetworkReply::NoError) {
-        qCritical() << "Cannot fetch lyric";
-    } else {
-        QJsonDocument json = QJsonDocument::fromJson(reply->readAll());
-        if (!json.isNull()) {
-            qDebug() << "Got lyric JSON";
-
-            QJsonObject jsonObj = json.object();
-
-            if (jsonObj.value("lyrics").toString().compare(QStringLiteral("Not found")) != 0) {
-                Lyric* lyric = new Lyric();
-                lyric->setArtist(jsonObj.value("artist").toString());
-                lyric->setSong(jsonObj.value("song").toString());
-
-                const QUrl url(jsonObj.value("url").toString());
-                getLyricText(url, lyric);
-                err = false;
-            } else {
-                qDebug() << "No lyric found";
-            }
-        } else {
-            qCritical() << "Got an invalid JSON!";
-        }
-    }
-
-    if (err) {
-        Q_EMIT lyricFetched(0, !err);
-    }
-
-    reply->deleteLater();
-}
-
-void LyricsWikiAPI::onGetLyricPageResult()
 {
     QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
 
@@ -178,14 +117,4 @@ void LyricsWikiAPI::onGetLyricPageResult()
     Q_EMIT lyricFetched(lyric, found);
 
     reply->deleteLater();
-}
-
-void LyricsWikiAPI::getLyricText(const QUrl &url, Lyric *lyric)
-{
-    qDebug() << "Requesting lyric page" << url.url();
-    QNetworkRequest req(url);
-    QNetworkReply* reply = network->get(req);
-    lyrics.insert(reply, lyric);
-
-    connect(reply, &QNetworkReply::finished, this, &LyricsWikiAPI::onGetLyricPageResult);
 }

@@ -42,15 +42,12 @@ public:
     virtual ~LyricsWikiAPI();
 
     void getLyric(const QString &artist, const QString &song);
-    void getLyricBypassApi(const QString &artist, const QString &song);
 
 Q_SIGNALS:
     void lyricFetched(Lyric *lyric, const bool &found);
 
 private:
     void onGetLyricResult();
-    void onGetLyricPageResult();
-    void getLyricText(const QUrl &url, Lyric *lyric);
 
     QNetworkAccessManager *network;
     QMap<QNetworkReply*, Lyric*> lyrics;
