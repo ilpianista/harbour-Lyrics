@@ -38,6 +38,7 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-lyrics-it.ts \
     translations/harbour-lyrics-ca.ts \
     translations/harbour-lyrics-cs.ts \
+    translations/harbour-lyrics-fi.ts \
     translations/harbour-lyrics-fr_FR.ts
 
 # LyricsWiki, Genius, LyricsMania
