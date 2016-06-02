@@ -46,18 +46,6 @@ Page {
                 MenuItem {
                     text: "ChartLyrics"
                 }
-
-                MenuItem {
-                    text: "Genius"
-                }
-
-                MenuItem {
-                    text: "LyricsMania"
-                }
-
-                MenuItem {
-                    text: "LyricsWiki"
-                }
             }
         }
     }
@@ -66,23 +54,13 @@ Page {
         var api = manager.getProvider();
         if (api === "ChartLyrics") {
             provider.currentIndex = 0;
-        } else if (api === "Genius") {
-            provider.currentIndex = 1;
-        } else if (api === "LyricsMania") {
-            provider.currentIndex = 2;
-        } else {
-            provider.currentIndex = 3;
         }
     }
 
     onStatusChanged: {
         if (status === PageStatus.Deactivating) {
             switch (provider.currentIndex) {
-            case 0: manager.setProvider("ChartLyrics"); break;
-            case 1: manager.setProvider("Genius"); break;
-            case 2: manager.setProvider("LyricsMania"); break;
-            case 3:
-            default: manager.setProvider("LyricsWiki");
+            default: manager.setProvider("ChartLyrics");
             }
         }
     }

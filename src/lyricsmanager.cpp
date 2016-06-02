@@ -29,9 +29,6 @@
 #include <QSettings>
 
 #include "chartlyricsapi.h"
-#include "geniusapi.h"
-#include "lyricsmaniaapi.h"
-#include "lyricswikiapi.h"
 #include "provider.h"
 
 LyricsManager::LyricsManager(QObject *parent) :
@@ -56,12 +53,6 @@ QString LyricsManager::getProvider() const
     const QString className = api->metaObject()->className();
     if (className.compare(QStringLiteral("ChartLyricsAPI")) == 0) {
         provider = "ChartLyrics";
-    } else if (className.compare(QStringLiteral("GeniusAPI")) == 0) {
-        provider = "Genius";
-    } else if (className.compare(QStringLiteral("LyricsManiaAPI")) == 0) {
-        provider = "LyricsMania";
-    } else {
-        provider = "LyricsWiki";
     }
 
     qDebug() << "Default provider is" << provider;
@@ -74,20 +65,8 @@ void LyricsManager::setProvider(const QString &provider)
         delete api;
     }
 
-    QString p;
-    if (provider.compare(QStringLiteral("ChartLyrics")) == 0) {
-        api = new ChartLyricsAPI;
-        p = QStringLiteral("ChartLyrics");
-    } else if (provider.compare(QStringLiteral("Genius")) == 0) {
-        api = new GeniusAPI;
-        p = QStringLiteral("Genius");
-    } else if (provider.compare(QStringLiteral("LyricsMania")) == 0) {
-        api = new LyricsManiaAPI;
-        p = QStringLiteral("LyricsMania");
-    } else {
-        api = new LyricsWikiAPI;
-        p = QStringLiteral("LyricsWiki");
-    }
+    api = new ChartLyricsAPI;
+    QString p = QStringLiteral("ChartLyrics");
 
     qDebug() << "Setting default provider to" << p;
     settings->setValue("Provider", p);

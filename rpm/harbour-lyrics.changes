@@ -1,16 +1,6 @@
-* Sat Jul 18 2015 Andrea Scarpino <me@andreascarpino.it> 0.4-1
-- Add LyricsMania
-
-* Fri Jul 17 2015 Andrea Scarpino <me@andreascarpino.it> 0.3.1-1
+* Thu Jun 02 2016 Andrea Scarpino <me@andreascarpino.it> 0.1.2-1
+- Add copy to clipboard (#2).
 - Display current provider in main window.
-- Fix settings not being saved.
-
-* Sat Jul 11 2015 Andrea Scarpino <me@andreascarpino.it> 0.3-1
-- Allow to switch between lyric providers.
-- Add Genius.com support.
-
-* Sat Jul 04 2015 Andrea Scarpino <me@andreascarpino.it> 0.2-1
-- Switch to LyricsWiki.
 
 * Sat Jul 04 2015 Andrea Scarpino <me@andreascarpino.it> 0.1.1-1
 - Landscape support.

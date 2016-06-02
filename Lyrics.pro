@@ -7,21 +7,14 @@ SOURCES += \
     src/lyricsmanager.cpp \
     src/lyric.cpp \
     src/chartlyricsapi.cpp \
-    src/geniusapi.cpp \
-    src/lyricswikiapi.cpp \
-    src/provider.cpp \
-    src/lyricsmaniaapi.cpp
+    src/provider.cpp
 
 HEADERS += \
     src/lyricsmanager.h \
     src/lyric_p.h \
     src/lyric.h \
     src/chartlyricsapi.h \
-    src/geniusapi.h \
-    src/geniusapi_secret.h \
-    src/lyricswikiapi.h \
-    src/provider.h \
-    src/lyricsmaniaapi.h
+    src/provider.h
 
 OTHER_FILES += \
     qml/cover/CoverPage.qml \
@@ -35,14 +28,6 @@ OTHER_FILES += \
     translations/*.ts
 
 CONFIG += sailfishapp_i18n
-TRANSLATIONS += translations/harbour-lyrics-it.ts \
-    translations/harbour-lyrics-ca.ts \
-    translations/harbour-lyrics-cs.ts \
-    translations/harbour-lyrics-fi.ts \
-    translations/harbour-lyrics-fr_FR.ts
-
-# LyricsWiki, Genius, LyricsMania
-QT += webkitwidgets
 
 # ChartLyrics
 QT += xml
