@@ -63,7 +63,7 @@ void LyricsWikiAPI::getLyric(const QString &artist, const QString &song)
     QString songNoSpaces(song);
     songNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
 
-    url.setPath(QChar::fromLatin1('/') + artNoSpaces + QChar::fromLatin1(':') + songNoSpaces);
+    url.setPath("/wiki/" + artNoSpaces + QChar::fromLatin1(':') + songNoSpaces);
 
     qDebug() << "Requesting lyric page" << url;
     QNetworkRequest req(url);
@@ -89,7 +89,6 @@ void LyricsWikiAPI::onGetLyricResult()
     } else {
         QWebPage page;
         page.settings()->setAttribute(QWebSettings::AutoLoadImages, false);
-        page.settings()->setAttribute(QWebSettings::JavascriptEnabled, false);
         page.mainFrame()->setHtml(reply->readAll());
         QWebElement lyricbox = page.mainFrame()->findFirstElement("div[class=lyricbox]");
 
