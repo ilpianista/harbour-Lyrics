@@ -70,6 +70,14 @@ Page {
                     songText.text = "";
                 }
             }
+
+            MenuItem {
+                text: qsTr("Copy to clipboard")
+
+                onClicked: {
+                    Clipboard.text = songText.text;
+                }
+            }
         }
 
         Column {
