@@ -37,7 +37,7 @@
 
 #include "lyric.h"
 
-const static QString API_URL = QStringLiteral("http://lyrics.wikia.com/api.php");
+const static QString SITE_URL = QStringLiteral("http://lyrics.wikia.com");
 
 LyricsWikiAPI::LyricsWikiAPI(QObject *parent) :
     Provider(parent)
@@ -56,7 +56,7 @@ void LyricsWikiAPI::getLyric(const QString &artist, const QString &song)
 {
     qDebug() << "Requesting lyric for artist" << artist << ", song" << song;
 
-    QUrl url(QStringLiteral("http://lyrics.wikia.com"));
+    QUrl url(SITE_URL);
 
     QString artNoSpaces(artist);
     artNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
