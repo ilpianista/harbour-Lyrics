@@ -30,7 +30,8 @@ Page {
     allowedOrientations: Orientation.All
 
     Column {
-        width: parent.width
+        x: Theme.horizontalPageMargin
+        width: parent.width - Theme.horizontalPageMargin * 2
 
         PageHeader {
             title: qsTr("Settings")
@@ -54,11 +55,14 @@ Page {
                 MenuItem {
                     text: "LyricsMania"
                 }
-
-                MenuItem {
-                    text: "LyricsWiki"
-                }
             }
+        }
+
+        Button {
+            width: parent.width
+            text: qsTr("Clear cache")
+
+            onClicked: manager.clearCache();
         }
     }
 
@@ -68,10 +72,8 @@ Page {
             provider.currentIndex = 0;
         } else if (api === "Genius") {
             provider.currentIndex = 1;
-        } else if (api === "LyricsMania") {
-            provider.currentIndex = 2;
         } else {
-            provider.currentIndex = 3;
+            provider.currentIndex = 2;
         }
     }
 
@@ -80,9 +82,8 @@ Page {
             switch (provider.currentIndex) {
             case 0: manager.setProvider("ChartLyrics"); break;
             case 1: manager.setProvider("Genius"); break;
-            case 2: manager.setProvider("LyricsMania"); break;
-            case 3:
-            default: manager.setProvider("LyricsWiki");
+            case 2:
+            default: manager.setProvider("LyricsMania");
             }
         }
     }

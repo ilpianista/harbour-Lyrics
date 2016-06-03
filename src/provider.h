@@ -28,7 +28,7 @@
 #include <QObject>
 #include <QString>
 
-#include "lyric.h"
+class Lyric;
 
 class Provider : public QObject
 {
@@ -45,5 +45,7 @@ Q_SIGNALS:
     void lyricFetched(Lyric *lyric, const bool &found);
 
 };
+
+Q_DECLARE_INTERFACE(Provider, "Provider")
 
 #endif // PROVIDER_H
