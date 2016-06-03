@@ -33,8 +33,8 @@ int main(int argc, char *argv[])
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
-    QCoreApplication::setApplicationName(QStringLiteral("harbour-Lyrics"));
-    QCoreApplication::setOrganizationDomain(QStringLiteral("it.andreascarpino"));
+    QCoreApplication::setApplicationName(QStringLiteral("harbour-lyrics"));
+    QCoreApplication::setOrganizationDomain(QStringLiteral("andreascarpino.it"));
 
     LyricsManager manager;
     view->rootContext()->setContextProperty("manager", &manager);
