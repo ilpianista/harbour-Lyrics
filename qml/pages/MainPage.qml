@@ -42,6 +42,7 @@ Page {
 
             if (found) {
                 songText.text = lyric.text;
+                copy.enabled = true;
             } else {
                 songText.text = "Not found :-("
             }
@@ -68,11 +69,14 @@ Page {
                     artist.forceActiveFocus();
                     song.text = "";
                     songText.text = "";
+                    copy.enabled = false;
                 }
             }
 
             MenuItem {
+                id: copy
                 text: qsTr("Copy to clipboard")
+                enabled: songText.text.length > 0
 
                 onClicked: {
                     Clipboard.text = songText.text;
