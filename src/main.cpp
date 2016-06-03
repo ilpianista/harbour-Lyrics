@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     QScopedPointer<QApplication> app(new QApplication(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
-    QCoreApplication::setApplicationName(QStringLiteral("Lyrics"));
+    QCoreApplication::setApplicationName(QStringLiteral("harbour-Lyrics"));
     QCoreApplication::setOrganizationDomain(QStringLiteral("it.andreascarpino"));
 
     LyricsManager manager;

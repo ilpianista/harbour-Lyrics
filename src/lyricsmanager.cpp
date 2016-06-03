@@ -39,7 +39,7 @@ LyricsManager::LyricsManager(QObject *parent) :
     QObject(parent)
   , api(0)
 {
-    settings = new QSettings(QCoreApplication::organizationDomain(), QCoreApplication::applicationName(), this);
+    settings = new QSettings(QCoreApplication::applicationName(), QCoreApplication::applicationName(), this);
 
     setProvider(settings->value("Provider").toString());
 }
