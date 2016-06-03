@@ -26,7 +26,9 @@
 
 #include <QCoreApplication>
 #include <QDebug>
+#include <QDir>
 #include <QSettings>
+#include <QStandardPaths>
 
 #include "chartlyricsapi.h"
 #include "provider.h"
@@ -44,6 +46,12 @@ LyricsManager::~LyricsManager()
 {
     delete settings;
     delete api;
+}
+
+void LyricsManager::clearCache()
+{
+    const bool ret = QDir(getLyricsDir()).removeRecursively();
+    qDebug() << "Cache cleared:" << ret;
 }
 
 QString LyricsManager::getProvider() const
@@ -72,10 +80,48 @@ void LyricsManager::setProvider(const QString &provider)
     settings->setValue("Provider", p);
 }
 
+QString LyricsManager::getLyricsDir() const
+{
+    const QDir lyricsDir(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
+
+    if (!lyricsDir.exists()) {
+        if (!lyricsDir.mkpath(lyricsDir.absolutePath())) {
+            qCritical() << "Cannot create dir!";
+        }
+    }
+
+    return QString(lyricsDir.absolutePath() + QDir::separator());
+}
+
+void LyricsManager::storeLyric(Lyric *lyric, const bool &found)
+{
+    if (found) {
+        qDebug() << "Caching lyric by" << lyric->artist() << lyric->song();
+        QFile f(getLyricsDir() + lyric->artist() + "_" + lyric->song() + ".txt");
+        f.open(QIODevice::WriteOnly);
+        f.write(lyric->text().toLatin1());
+        f.close();
+    }
+}
+
 void LyricsManager::search(const QString &artist, const QString &song)
 {
-    qDebug() << "Querying" << api->metaObject()->className();
-    api->getLyric(artist, song);
+    QFile f(getLyricsDir() + artist + "_" + song + ".txt");
+    if (f.exists()) {
+        f.open(QIODevice::ReadOnly);
 
-    connect(api, &Provider::lyricFetched, this, &LyricsManager::searchResult);
+        Lyric* lyric = new Lyric();
+        lyric->setArtist(artist);
+        lyric->setSong(song);
+        lyric->setText(f.readAll());
+        f.close();
+
+        Q_EMIT searchResult(lyric, true);
+    } else {
+        qDebug() << "Querying" << api->metaObject()->className();
+        api->getLyric(artist, song);
+
+        connect(api, &Provider::lyricFetched, this, &LyricsManager::searchResult);
+        connect(api, &Provider::lyricFetched, this, &LyricsManager::storeLyric);
+    }
 }

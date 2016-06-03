@@ -30,7 +30,8 @@ Page {
     allowedOrientations: Orientation.All
 
     Column {
-        width: parent.width
+        x: Theme.horizontalPageMargin
+        width: parent.width - Theme.horizontalPageMargin * 2
 
         PageHeader {
             title: qsTr("Settings")
@@ -47,6 +48,13 @@ Page {
                     text: "ChartLyrics"
                 }
             }
+        }
+
+        Button {
+            width: parent.width
+            text: qsTr("Clear cache")
+
+            onClicked: manager.clearCache();
         }
     }
 

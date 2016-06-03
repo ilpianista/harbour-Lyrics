@@ -42,13 +42,18 @@
 <context>
     <name>Settings</name>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="36"/>
+        <location filename="../qml/pages/Settings.qml" line="37"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="42"/>
+        <location filename="../qml/pages/Settings.qml" line="43"/>
         <source>Provider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/Settings.qml" line="55"/>
+        <source>Clear cache</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
