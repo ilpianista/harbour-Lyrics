@@ -8,7 +8,6 @@ SOURCES += \
     src/lyric.cpp \
     src/chartlyricsapi.cpp \
     src/geniusapi.cpp \
-    src/lyricswikiapi.cpp \
     src/provider.cpp \
     src/lyricsmaniaapi.cpp
 
@@ -19,7 +18,6 @@ HEADERS += \
     src/chartlyricsapi.h \
     src/geniusapi.h \
     src/geniusapi_secret.h \
-    src/lyricswikiapi.h \
     src/provider.h \
     src/lyricsmaniaapi.h
 
@@ -41,7 +39,7 @@ TRANSLATIONS += translations/harbour-lyrics-it.ts \
     translations/harbour-lyrics-fi.ts \
     translations/harbour-lyrics-fr_FR.ts
 
-# LyricsWiki, Genius, LyricsMania
+# Genius, LyricsMania
 QT += webkitwidgets
 
 # ChartLyrics

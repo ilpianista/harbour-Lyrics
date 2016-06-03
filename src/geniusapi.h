@@ -37,14 +37,12 @@ class QUrl;
 class GeniusAPI : public Provider
 {
     Q_OBJECT
+    Q_INTERFACES(Provider)
 public:
     explicit GeniusAPI(QObject *parent = 0);
     virtual ~GeniusAPI();
 
     void getLyric(const QString &artist, const QString &song);
-
-Q_SIGNALS:
-    void lyricFetched(Lyric *lyric, const bool &found);
 
 private:
     void onGetLyricResult();

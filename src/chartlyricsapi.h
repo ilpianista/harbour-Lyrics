@@ -34,14 +34,12 @@ class QNetworkAccessManager;
 class ChartLyricsAPI : public Provider
 {
     Q_OBJECT
+    Q_INTERFACES(Provider)
 public:
     explicit ChartLyricsAPI(QObject *parent = 0);
     virtual ~ChartLyricsAPI();
 
     void getLyric(const QString &artist, const QString &song);
-
-Q_SIGNALS:
-    void lyricFetched(Lyric *lyric, const bool &found);
 
 private:
     void onGetLyricResult();

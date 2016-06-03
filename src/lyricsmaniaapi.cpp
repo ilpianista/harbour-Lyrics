@@ -32,6 +32,8 @@
 #include <QWebElement>
 #include <QWebFrame>
 
+#include "lyric.h"
+
 const static QString BASE_URL = QStringLiteral("http://www.lyricsmania.com");
 
 LyricsManiaAPI::LyricsManiaAPI(QObject *parent) :

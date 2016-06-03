@@ -1,6 +1,6 @@
 Name: harbour-lyrics
 Summary: Music lyrics application
-Version: 0.4
+Version: 0.5
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
@@ -13,7 +13,7 @@ Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
   Music lyrics application.
-  It does support: ChartLyrics, LiricsWiki, Genius.
+  It does support: ChartLyrics, LyricsMania, Genius.
 Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution
