@@ -88,6 +88,7 @@ Page {
             id: column
             x: Theme.horizontalPageMargin
             width: parent.width - Theme.horizontalPageMargin * 2
+            spacing: Theme.paddingMedium
 
             PageHeader {
                 title: "Lyrics"
