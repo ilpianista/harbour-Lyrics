@@ -26,12 +26,14 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Page {
+    id: page
 
     allowedOrientations: Orientation.All
 
     Column {
         x: Theme.horizontalPageMargin
         width: parent.width - Theme.horizontalPageMargin * 2
+        spacing: Theme.paddingMedium
 
         PageHeader {
             title: qsTr("Settings")
@@ -39,7 +41,7 @@ Page {
 
         ComboBox {
             id: provider
-            width: parent.width
+            width: page.width
             label: qsTr("Provider")
 
             menu: ContextMenu {
@@ -51,8 +53,8 @@ Page {
         }
 
         Button {
-            width: parent.width
             text: qsTr("Clear cache")
+            anchors.horizontalCenter: parent.horizontalCenter
 
             onClicked: manager.clearCache();
         }
