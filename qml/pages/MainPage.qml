@@ -107,6 +107,8 @@ Page {
                 focus: true
                 placeholderText: qsTr("Artist")
 
+                onTextChanged: search.enabled = (text.length > 0 && song.text.length > 0)
+
                 EnterKey.enabled: text.length > 0 && song.text.length > 0
                 EnterKey.onClicked: searchLyric();
             }
@@ -115,6 +117,8 @@ Page {
                 id: song
                 width: parent.width
                 placeholderText: qsTr("Song")
+
+                onTextChanged: search.enabled = (text.length > 0 && artist.text.length > 0)
 
                 EnterKey.enabled: text.length > 0 && artist.text.length > 0
                 EnterKey.onClicked: searchLyric();
@@ -130,12 +134,9 @@ Page {
                 id: search
                 text: qsTr("Search")
                 anchors.horizontalCenter: parent.horizontalCenter
+                enabled: false
 
-                onClicked: {
-                    if (artist.text.length > 0 && song.text.length > 0) {
-                        searchLyric();
-                    }
-                }
+                onClicked: searchLyric()
             }
 
             Text {
