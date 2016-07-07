@@ -33,11 +33,13 @@ OTHER_FILES += \
     translations/*.ts
 
 CONFIG += sailfishapp_i18n
-TRANSLATIONS += translations/harbour-lyrics-it.ts \
+TRANSLATIONS += translations/harbour-lyrics-ar.ts \
     translations/harbour-lyrics-ca.ts \
     translations/harbour-lyrics-cs.ts \
     translations/harbour-lyrics-fi.ts \
-    translations/harbour-lyrics-fr_FR.ts
+    translations/harbour-lyrics-fr_FR.ts \
+    translations/harbour-lyrics-fr_FR.ts \
+    translations/harbour-lyrics-it.ts
 
 # Genius, LyricsMania
 QT += webkitwidgets

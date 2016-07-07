@@ -1,40 +1,40 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ca" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ar" version="2.1">
 <context>
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="65"/>
         <source>Clear</source>
-        <translation>Neteja</translation>
+        <translation>محو</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="59"/>
         <source>Settings</source>
-        <translation>Configuració</translation>
+        <translation>الإعدادات</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="164"/>
         <source>Powered by %1</source>
-        <translation>Impulsat per %1</translation>
+        <translation>مشغل بواسطة %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="108"/>
         <source>Artist</source>
-        <translation>Artista</translation>
+        <translation>الفنان</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="78"/>
         <source>Copy to clipboard</source>
-        <translation>Copia al porta-retalls</translation>
+        <translation>انسخ إلى الحافظة</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="117"/>
         <source>Song</source>
-        <translation>Cançó</translation>
+        <translation>الأغنية</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Search</source>
-        <translation>Cerca</translation>
+        <translation>بحث</translation>
     </message>
 </context>
 <context>
@@ -42,17 +42,17 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation>Configuració</translation>
+        <translation>الإعدادات</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
         <source>Provider</source>
-        <translation>Proveïdor</translation>
+        <translation>موفر</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="64"/>
         <source>Clear cache</source>
-        <translation>Neteja la memòria cau</translation>
+        <translation>امسح الخابية</translation>
     </message>
 </context>
 </TS>
