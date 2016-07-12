@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ar" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ar">
 <context>
     <name>MainPage</name>
     <message>
@@ -12,7 +14,7 @@
         <translation>الإعدادات</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="164"/>
+        <location filename="../qml/pages/MainPage.qml" line="165"/>
         <source>Powered by %1</source>
         <translation>مشغل بواسطة %1</translation>
     </message>
@@ -27,12 +29,12 @@
         <translation>انسخ إلى الحافظة</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="117"/>
+        <location filename="../qml/pages/MainPage.qml" line="119"/>
         <source>Song</source>
         <translation>الأغنية</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="135"/>
         <source>Search</source>
         <translation>بحث</translation>
     </message>
