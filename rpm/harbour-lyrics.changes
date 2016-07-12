@@ -1,3 +1,9 @@
+* Wed Jul 13 2016 Andrea Scarpino <me@andreascarpino.it> 0.5.1-1
+- Add Serbian and Arabic translation
+- Do not enable the search button if there's no text
+- Fix provider combobox width and element spacing
+- Enable copy when there's something to copy
+
 * Thu Jun 02 2016 Andrea Scarpino <me@andreascarpino.it> 0.5-1
 - Add copy to clipboard (#2).
 - Cache lyrics (#1).

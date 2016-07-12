@@ -14,7 +14,7 @@
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="164"/>
+        <location filename="../qml/pages/MainPage.qml" line="165"/>
         <source>Powered by %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29,12 +29,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="117"/>
+        <location filename="../qml/pages/MainPage.qml" line="119"/>
         <source>Song</source>
         <translation>Píseň</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="135"/>
         <source>Search</source>
         <translation>Hledat</translation>
     </message>
