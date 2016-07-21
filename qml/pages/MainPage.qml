@@ -157,7 +157,7 @@ Page {
         busy.visible = true;
         busy.running = true;
         search.enabled = false;
-        manager.search(artist.text, song.text);
+        manager.search(artist.text.trim(), song.text.trim());
     }
 
     onStatusChanged: {
