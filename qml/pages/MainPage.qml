@@ -29,6 +29,8 @@ Page {
 
     allowedOrientations: Orientation.All
 
+    property bool userTyping: false;
+
     Connections {
         target: manager
 
@@ -45,6 +47,15 @@ Page {
                 copy.enabled = true;
             } else {
                 songText.text = "Not found :-("
+            }
+        }
+
+        onMediaPlayerInfo: {
+            console.log("Fetched song informations from Media Player");
+            if (!userTyping) {
+                artist.text = songArtist;
+                song.text = songTitle;
+                searchLyric();
             }
         }
     }
@@ -108,6 +119,7 @@ Page {
                 placeholderText: qsTr("Artist")
 
                 onTextChanged: search.enabled = (text.length > 0 && song.text.length > 0)
+                onActiveFocusChanged: userTyping = artist.activeFocus
 
                 EnterKey.enabled: text.length > 0 && song.text.length > 0
                 EnterKey.onClicked: searchLyric();
@@ -119,6 +131,7 @@ Page {
                 placeholderText: qsTr("Song")
 
                 onTextChanged: search.enabled = (text.length > 0 && artist.text.length > 0)
+                onActiveFocusChanged: userTyping = song.activeFocus
 
                 EnterKey.enabled: text.length > 0 && artist.text.length > 0
                 EnterKey.onClicked: searchLyric();

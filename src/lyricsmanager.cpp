@@ -33,21 +33,25 @@
 #include "chartlyricsapi.h"
 #include "geniusapi.h"
 #include "lyricsmaniaapi.h"
+#include "mediaplayerscanner.h"
 #include "provider.h"
 
 LyricsManager::LyricsManager(QObject *parent) :
     QObject(parent)
   , api(0)
+  , mpScanner(0)
 {
     settings = new QSettings(QCoreApplication::applicationName(), QCoreApplication::applicationName(), this);
 
     setProvider(settings->value("Provider").toString());
+    setMediaPlayerScanner(settings->value("MediaPlayerScanner", true).toBool());
 }
 
 LyricsManager::~LyricsManager()
 {
     delete settings;
     delete api;
+    delete mpScanner;
 }
 
 void LyricsManager::clearCache()
@@ -139,4 +143,22 @@ void LyricsManager::search(const QString &artist, const QString &song)
         connect(api, &Provider::lyricFetched, this, &LyricsManager::searchResult);
         connect(api, &Provider::lyricFetched, this, &LyricsManager::storeLyric);
     }
+}
+
+bool LyricsManager::getMediaPlayerScanner() const
+{
+    return settings->value("MediaPlayerScanner").toBool();
+}
+
+void LyricsManager::setMediaPlayerScanner(const bool enabled)
+{
+    if (enabled) {
+        mpScanner = new MediaPlayerScanner();
+        connect(mpScanner, &MediaPlayerScanner::mediaPlayerInfo, this, &LyricsManager::mediaPlayerInfo);
+    } else if (mpScanner) {
+        delete mpScanner;
+        mpScanner = 0;
+    }
+
+    settings->setValue("MediaPlayerScanner", enabled);
 }
