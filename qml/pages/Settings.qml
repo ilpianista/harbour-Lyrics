@@ -60,6 +60,18 @@ Page {
             }
         }
 
+        TextSwitch {
+            id: scanner
+            width: page.width
+            text: qsTr("Enable Media Player scanner")
+            description: qsTr("Checks Media Player to get song info. Do not focus any field to allow text substitution.")
+            checked: true
+
+            onCheckedChanged: {
+                manager.setMediaPlayerScanner(checked);
+            }
+        }
+
         Button {
             text: qsTr("Clear cache")
             anchors.horizontalCenter: parent.horizontalCenter
@@ -77,6 +89,8 @@ Page {
         } else {
             provider.currentIndex = 2;
         }
+
+        scanner.checked = manager.getMediaPlayerScanner();
     }
 
     onStatusChanged: {
