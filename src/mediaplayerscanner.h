@@ -1,7 +1,7 @@
 /*
   The MIT License (MIT)
 
-  Copyright (c) 2015 Andrea Scarpino <me@andreascarpino.it>
+  Copyright (c) 2016 Andrea Scarpino <me@andreascarpino.it>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -22,44 +22,33 @@
   SOFTWARE.
 */
 
-#ifndef LYRICSMANAGER_H
-#define LYRICSMANAGER_H
+#ifndef MEDIAPLAYERSCANNER_H
+#define MEDIAPLAYERSCANNER_H
 
 #include <QObject>
-#include <QString>
 
-#include "lyric.h"
+#include "mediaplayer2_interface.h"
 
-class QSettings;
-class Provider;
-class MediaPlayerScanner;
+class QTimer;
 
-class LyricsManager : public QObject
+class MediaPlayerScanner : public QObject
 {
     Q_OBJECT
 public:
-    explicit LyricsManager(QObject *parent = 0);
-    virtual ~LyricsManager();
-
-    Q_INVOKABLE void clearCache();
-    Q_INVOKABLE QString getProvider() const;
-    Q_INVOKABLE void search(const QString &artist, const QString &song);
-    Q_INVOKABLE bool getMediaPlayerScanner() const;
-    Q_INVOKABLE void setMediaPlayerScanner(const bool enabled);
-    Q_INVOKABLE void setProvider(const QString &provider);
+    explicit MediaPlayerScanner(QObject *parent = 0);
+    virtual ~MediaPlayerScanner();
 
 Q_SIGNALS:
-    void searchResult(Lyric *lyric, const bool &found);
     void mediaPlayerInfo(const QString &songArtist, const QString &songTitle);
 
 private:
-    QString getLyricsDir() const;
-    void storeLyric(Lyric *lyric, const bool &found);
+    static const QString MP_DBUS_SERVICE;
+    static const QString MP_DBUS_DAEMON_PATH;
 
-    QSettings *settings;
-    Provider *api;
-    MediaPlayerScanner *mpScanner;
+    void fetchInfo();
 
+    OrgMprisMediaPlayer2PlayerInterface impface;
+    QTimer* m_timer;
 };
 
-#endif // LYRICSMANAGER_H
+#endif // MEDIAPLAYERSCANNER_H

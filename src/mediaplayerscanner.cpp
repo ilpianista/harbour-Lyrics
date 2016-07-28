@@ -1,7 +1,7 @@
 /*
   The MIT License (MIT)
 
-  Copyright (c) 2015 Andrea Scarpino <me@andreascarpino.it>
+  Copyright (c) 2016 Andrea Scarpino <me@andreascarpino.it>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -22,44 +22,36 @@
   SOFTWARE.
 */
 
-#ifndef LYRICSMANAGER_H
-#define LYRICSMANAGER_H
+#include "mediaplayerscanner.h"
 
-#include <QObject>
-#include <QString>
+#include <QTimer>
 
-#include "lyric.h"
+const QString MediaPlayerScanner::MP_DBUS_SERVICE(QLatin1String("org.mpris.MediaPlayer2.jolla-mediaplayer"));
+const QString MediaPlayerScanner::MP_DBUS_DAEMON_PATH(QLatin1String("/org/mpris/MediaPlayer2"));
 
-class QSettings;
-class Provider;
-class MediaPlayerScanner;
-
-class LyricsManager : public QObject
+MediaPlayerScanner::MediaPlayerScanner(QObject *parent) :
+    QObject(parent)
+  , impface(MediaPlayerScanner::MP_DBUS_SERVICE, MediaPlayerScanner::MP_DBUS_DAEMON_PATH, QDBusConnection::sessionBus())
+  , m_timer(new QTimer())
 {
-    Q_OBJECT
-public:
-    explicit LyricsManager(QObject *parent = 0);
-    virtual ~LyricsManager();
+    fetchInfo();
 
-    Q_INVOKABLE void clearCache();
-    Q_INVOKABLE QString getProvider() const;
-    Q_INVOKABLE void search(const QString &artist, const QString &song);
-    Q_INVOKABLE bool getMediaPlayerScanner() const;
-    Q_INVOKABLE void setMediaPlayerScanner(const bool enabled);
-    Q_INVOKABLE void setProvider(const QString &provider);
+    m_timer->start(5 * 1000);
+    connect(m_timer, &QTimer::timeout, this, &MediaPlayerScanner::fetchInfo);
+}
 
-Q_SIGNALS:
-    void searchResult(Lyric *lyric, const bool &found);
-    void mediaPlayerInfo(const QString &songArtist, const QString &songTitle);
+MediaPlayerScanner::~MediaPlayerScanner()
+{
+    delete m_timer;
+}
 
-private:
-    QString getLyricsDir() const;
-    void storeLyric(Lyric *lyric, const bool &found);
+void MediaPlayerScanner::fetchInfo()
+{
+    const QVariantMap map = impface.metadata();
+    const QStringList artists(map["xesam:artist"].toStringList());
+    const QString title(map["xesam:title"].toString());
 
-    QSettings *settings;
-    Provider *api;
-    MediaPlayerScanner *mpScanner;
-
-};
-
-#endif // LYRICSMANAGER_H
+    if (!artists.isEmpty() && !title.isEmpty()) {
+        Q_EMIT mediaPlayerInfo(artists.at(0), title);
+    }
+}
