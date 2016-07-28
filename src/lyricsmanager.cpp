@@ -78,6 +78,10 @@ void LyricsManager::setProvider(const QString &provider)
     }
 
     api = new ChartLyricsAPI;
+
+    connect(api, &Provider::lyricFetched, this, &LyricsManager::searchResult);
+    connect(api, &Provider::lyricFetched, this, &LyricsManager::storeLyric);
+
     QString p = QStringLiteral("ChartLyrics");
 
     qDebug() << "Setting default provider to" << p;
@@ -124,9 +128,6 @@ void LyricsManager::search(const QString &artist, const QString &song)
     } else {
         qDebug() << "Querying" << api->metaObject()->className();
         api->getLyric(artist, song);
-
-        connect(api, &Provider::lyricFetched, this, &LyricsManager::searchResult);
-        connect(api, &Provider::lyricFetched, this, &LyricsManager::storeLyric);
     }
 }
 
