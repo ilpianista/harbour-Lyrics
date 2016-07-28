@@ -87,10 +87,10 @@ void ChartLyricsAPI::onGetLyricResult()
 
                 const QString text = res.namedItem(QStringLiteral("Lyric")).toElement().text();
                 if (!text.isEmpty()) {
-                    qDebug() << "Got lyric text";
-
                     lyric->setText(text);
                     found = true;
+                } else {
+                    qDebug() << "Got an empty text";
                 }
             } else {
                 qDebug() << "No lyric found";
