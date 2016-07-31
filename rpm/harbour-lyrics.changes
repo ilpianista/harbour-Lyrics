@@ -1,4 +1,8 @@
-* Sun Jul 31 2016 Andrea Scarpino <me@andreascarpino.it> 0.5.2-1
+* Sun Jul 31 2016 Andrea Scarpino <me@andreascarpino.it> 0.5.3-1
+- Show the lyric in the cover.
+- Bigger font for the lyric.
+
+* Sun Jul 30 2016 Andrea Scarpino <me@andreascarpino.it> 0.5.2-1
 - Fetch artist and song title info from Media Player.
 
 * Wed Jul 13 2016 Andrea Scarpino <me@andreascarpino.it> 0.5.1-1
