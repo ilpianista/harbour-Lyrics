@@ -157,6 +157,7 @@ Page {
                 width: parent.width
                 color: Theme.secondaryColor
                 wrapMode: Text.Wrap
+                font.pixelSize: Theme.fontSizeMedium
             }
         }
 
