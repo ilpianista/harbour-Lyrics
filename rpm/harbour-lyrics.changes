@@ -1,3 +1,6 @@
+* Sun Jul 31 2016 Andrea Scarpino <me@andreascarpino.it> 0.5.2-1
+- Fetch artist and song title info from Media Player.
+
 * Wed Jul 13 2016 Andrea Scarpino <me@andreascarpino.it> 0.5.1-1
 - Add Serbian and Arabic translation
 - Do not enable the search button if there's no text
