@@ -1,3 +1,6 @@
+* Sun Jul 31 2016 Andrea Scarpino <me@andreascarpino.it> 0.1.3-1
+- Fetch artist and song title info from Media Player.
+
 * Fri Jun 03 2016 Andrea Scarpino <me@andreascarpino.it> 0.1.2-1
 - Add copy to clipboard (#2).
 - Cache lyrics (#1).
