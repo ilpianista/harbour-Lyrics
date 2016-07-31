@@ -27,7 +27,7 @@
 
 #include <QObject>
 
-#include "mediaplayer2_interface.h"
+#include "player_interface.h"
 
 class QTimer;
 
