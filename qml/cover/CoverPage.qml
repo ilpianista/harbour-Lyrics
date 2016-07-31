@@ -27,8 +27,47 @@ import Sailfish.Silica 1.0
 
 CoverBackground {
 
+    Connections {
+        target: manager
+
+        onSearchResult: {
+            placeholder.visible = !found;
+
+            if (found) {
+                title.text = lyric.artist + " - " + lyric.song;
+                songText.text = lyric.text;
+            }
+            songInfo.visible = found;
+        }
+    }
+
     CoverPlaceholder {
+        id: placeholder
         text: "Lyrics"
         icon.source: "/usr/share/icons/hicolor/86x86/apps/harbour-lyrics.png"
+    }
+
+    Column {
+        id: songInfo
+        anchors.centerIn: parent
+        x: Theme.paddingSmall
+        width: parent.width - Theme.paddingSmall * 2
+
+        Label {
+            id: title
+            width: parent.width
+            wrapMode: Text.Wrap
+            font.pixelSize: Theme.fontSizeMedium
+            horizontalAlignment: Text.AlignHCenter
+        }
+
+        Label {
+            id: songText
+            width: parent.width
+            wrapMode: Text.Wrap
+            maximumLineCount: 10
+            elide: Text.ElideRight
+            font.pixelSize: Theme.fontSizeExtraSmall
+        }
     }
 }
