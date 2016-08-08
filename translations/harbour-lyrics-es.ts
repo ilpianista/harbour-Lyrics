@@ -1,40 +1,40 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
 <context>
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Clear</source>
-        <translation>Rensa</translation>
+        <translation>Limpiar</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="70"/>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="179"/>
         <source>Powered by %1</source>
-        <translation>Drivs av %1</translation>
+        <translation>Proporcionado por %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="119"/>
         <source>Artist</source>
-        <translation>Artist</translation>
+        <translation>Artista</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="89"/>
         <source>Copy to clipboard</source>
-        <translation>Kopiera till urklipp</translation>
+        <translation>Copiar al portapapeles</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Song</source>
-        <translation>Låt</translation>
+        <translation>Canción</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="148"/>
         <source>Search</source>
-        <translation>Sök</translation>
+        <translation>Buscar</translation>
     </message>
 </context>
 <context>
@@ -42,27 +42,27 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation>Inställningar</translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
         <source>Provider</source>
-        <translation>Leverantör</translation>
+        <translation>Proveedor</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
         <source>Enable Media Player scanner</source>
-        <translation>Aktivera skanner för mediaspelaren</translation>
+        <translation>Habilitar escaneo de Multimedia</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation>Söker i mediaspelaren efter låtinfo. Fokusera inte något fält, för att tillåta textersättning.</translation>
+        <translation>Consulta el reproductor Multimedia para obtener información de la canción. No te centres en ningún campo para permitir la sustitución del texto.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
         <source>Clear cache</source>
-        <translation>Rensa cache</translation>
+        <translation>Limpiar caché</translation>
     </message>
 </context>
 </TS>
