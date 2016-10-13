@@ -1,40 +1,40 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="it" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="nl" version="2.1">
 <context>
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Clear</source>
-        <translation>Pulisci</translation>
+        <translation>Wissen</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="70"/>
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="179"/>
         <source>Powered by %1</source>
-        <translation>Stai usando %1</translation>
+        <translation>Aangedreven door %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="119"/>
         <source>Artist</source>
-        <translation>Artista</translation>
+        <translation>Artiest</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="89"/>
         <source>Copy to clipboard</source>
-        <translation>Copia negli appunti</translation>
+        <translation>Kopiëren naar klembord</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Song</source>
-        <translation>Brano</translation>
+        <translation>Liedje</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="148"/>
         <source>Search</source>
-        <translation>Cerca</translation>
+        <translation>Zoeken</translation>
     </message>
 </context>
 <context>
@@ -42,27 +42,27 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation>Impostazioni</translation>
+        <translation>Instellingen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
         <source>Provider</source>
-        <translation>Servizio</translation>
+        <translation>Aanbieder</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
         <source>Enable Media Player scanner</source>
-        <translation>Abilita riconoscimento automatico</translation>
+        <translation>Mediaspelerscanner inschakelen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation>Ottiene le informazioni del brano dal lettore multimediale. Non posizionare il cursore in nessun campo di testo in modo da permettere la compilazione automatica.</translation>
+        <translation>Controleert de mediaspeler om informatie over liedjes op te halen. Focus niet op een veld om tekstvervanging toe te staan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
         <source>Clear cache</source>
-        <translation>Pulisci cache</translation>
+        <translation>Cache wissen</translation>
     </message>
 </context>
 </TS>

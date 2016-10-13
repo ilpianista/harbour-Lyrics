@@ -52,12 +52,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
         <source>Enable Media Player scanner</source>
-        <translation type="unfinished"/>
+        <translation>Activer l&apos;indexation par Media Player</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation type="unfinished"/>
+        <translation>Vérification sur Media Player pour obtenir les info. sur les morceaux. Pour autoriser la substitution du texte ne sélectionnez aucun champ.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
