@@ -44,11 +44,14 @@ TRANSLATIONS += \
     translations/harbour-lyrics-ar.ts \
     translations/harbour-lyrics-ca.ts \
     translations/harbour-lyrics-cs.ts \
+    translations/harbour-lyrics-de.ts \
+    translations/harbour-lyrics-el.ts \
     translations/harbour-lyrics-es.ts \
     translations/harbour-lyrics-fi.ts \
     translations/harbour-lyrics-fr_FR.ts \
     translations/harbour-lyrics-it.ts \
     translations/harbour-lyrics-nl.ts \
+    translations/harbour-lyrics-ru.ts \
     translations/harbour-lyrics-sr.ts \
     translations/harbour-lyrics-sv.ts
 
