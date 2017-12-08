@@ -8,8 +8,16 @@ Currently it supports:
   * [LyricsMania](http://www.lyricsmania.com)
   * [LyricsWiki](http://lyrics.wikia.com)
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ilpianista&url=https://git.merproject.org/ilpianista/harbour-Lyrics&title=harbour-Lyrics&language=&tags=jolla&category=software)
+[Build status](https://build.merproject.org/package/live_build_log/home:ilpianista/harbour-lyrics/sailfish_latest_armv7hl/armv8el)
+
+## Translations
 
 Translations via [Transifex](https://www.transifex.com/ilpianista-harbour/harbour-Lyrics/dashboard/), thank you!
 
-[Build status](https://build.merproject.org/package/live_build_log/home:ilpianista/harbour-lyrics/sailfish_latest_armv7hl/armv8el)
+## Donate
+
+Donations via [Liberapay](https://liberapay.com/ilpianista) or Bitcoin (1Ph3hFEoQaD4PK6MhL3kBNNh9FZFBfisEH) are always welcomed, _thank you_!
+
+## License
+
+MIT
