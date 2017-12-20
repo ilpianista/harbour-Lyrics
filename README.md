@@ -12,7 +12,9 @@ Currently it supports:
 
 ## Translations
 
-Translations via [Transifex](https://www.transifex.com/ilpianista-harbour/harbour-Lyrics/dashboard/), thank you!
+[![Translation status](https://hosted.weblate.org/widgets/harbour-lyrics/-/svg-badge.svg)](https://hosted.weblate.org/engage/harbour-lyrics/?utm_source=widget)
+
+Translations via [Weblate](https://hosted.weblate.org/projects/harbour-lyrics/), thank you!
 
 ## Donate
 
