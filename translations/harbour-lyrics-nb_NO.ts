@@ -6,17 +6,17 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Clear</source>
-        <translation></translation>
+        <translation>Tøm</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="70"/>
         <source>Settings</source>
-        <translation></translation>
+        <translation>Innstillinger</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="179"/>
         <source>Powered by %1</source>
-        <translation></translation>
+        <translation>Drevet av %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="119"/>
@@ -26,17 +26,17 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="89"/>
         <source>Copy to clipboard</source>
-        <translation></translation>
+        <translation>Kopier til utklippstavle</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Song</source>
-        <translation></translation>
+        <translation>Låt</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="148"/>
         <source>Search</source>
-        <translation></translation>
+        <translation>Søk</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation></translation>
+        <translation>Innstillinger</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
@@ -54,17 +54,17 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
         <source>Enable Media Player scanner</source>
-        <translation></translation>
+        <translation>Skru på skanner for mediaspilleren</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation></translation>
+        <translation>Sjekker mediaspilleren for låtinfo. Ikke fokuser på noen felter, for å tillate teksterstatning.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
         <source>Clear cache</source>
-        <translation></translation>
+        <translation>Tøm hurtiglager</translation>
     </message>
 </context>
 </TS>
