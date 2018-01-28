@@ -6,17 +6,17 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Clear</source>
-        <translation></translation>
+        <translation>Puhasta</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="70"/>
         <source>Settings</source>
-        <translation></translation>
+        <translation>Seaded</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="179"/>
         <source>Powered by %1</source>
-        <translation></translation>
+        <translation>Kasutab %1 tuge</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="119"/>
@@ -26,17 +26,17 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="89"/>
         <source>Copy to clipboard</source>
-        <translation></translation>
+        <translation>Kopeeri lõikelauale</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Song</source>
-        <translation></translation>
+        <translation>Lugu</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="148"/>
         <source>Search</source>
-        <translation></translation>
+        <translation>Otsi</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation></translation>
+        <translation>Seaded</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
@@ -54,17 +54,17 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
         <source>Enable Media Player scanner</source>
-        <translation></translation>
+        <translation>Luba Meediaesitaja skänner</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation></translation>
+        <translation>Proovib laulu teavet hankida Meediaesitajalt. Teksti asendamiseks ära vii fookust ühelegi väljale.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
         <source>Clear cache</source>
-        <translation></translation>
+        <translation>Puhasta vahemälu</translation>
     </message>
 </context>
 </TS>
