@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="de" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS language="de" version="2.1">
 <context>
     <name>MainPage</name>
     <message>
@@ -14,7 +16,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="179"/>
         <source>Powered by %1</source>
-        <translation>Powered by %1</translation>
+        <translation>Unterstützt von %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="119"/>
