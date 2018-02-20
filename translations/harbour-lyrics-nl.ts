@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="nl" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS language="nl" version="2.1">
 <context>
     <name>MainPage</name>
     <message>
@@ -29,7 +31,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Song</source>
-        <translation>Liedje</translation>
+        <translation>Nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="148"/>
@@ -47,7 +49,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
         <source>Provider</source>
-        <translation>Aanbieder</translation>
+        <translation>Dienst</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
@@ -57,7 +59,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation>Controleert de mediaspeler om informatie over liedjes op te halen. Focus niet op een veld om tekstvervanging toe te staan.</translation>
+        <translation>Controleert de mediaspeler om informatie over nummers op te halen. Focus niet op een veld om tekstvervanging toe te staan.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
