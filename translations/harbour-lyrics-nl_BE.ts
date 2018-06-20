@@ -59,12 +59,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation>Controleerd de mediaspeler voor informatie over liedjes op t’halen. Zorgd da’ ge nie op een veld focust voor tekstvervanging toe te laten.</translation>
+        <translation>Controleert de mediaspeler voor informatie over liedjes op te halen. Zorgt dat ge niet op een veld focust voor tekstvervanging toe te laten.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
         <source>Clear cache</source>
-        <translation>Cache wissen</translation>
+        <translation>Cachegeheugen wissen</translation>
     </message>
 </context>
 </TS>
