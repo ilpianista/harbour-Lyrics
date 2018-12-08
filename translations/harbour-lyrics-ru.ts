@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS language="ru" version="2.1">
 <context>
     <name>MainPage</name>
     <message>
@@ -57,7 +59,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation>Получать название текущей песни, исполняемой музыкальным плеером,и использовать для поиска. Чтобы позволить заменять текст - не ставьте курсор в текстовые поля. </translation>
+        <translation>Получать название текущей песни, исполняемой музыкальным плеером,и использовать для поиска. Чтобы позволить заменять текст - не ставьте курсор в текстовые поля.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
