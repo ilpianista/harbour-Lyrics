@@ -59,7 +59,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation>Vérification sur Media Player pour obtenir les info. sur les morceaux. Pour autoriser la substitution du texte ne sélectionnez aucun champ.</translation>
+        <translation>Vérification du lecteur de média pour obtenir les informations du morceau. Pour autoriser la substitution du texte ne sélectionnez aucun champ.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
