@@ -6,37 +6,37 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Temizle</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="70"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="179"/>
         <source>Powered by %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 tarafından sağlanıyor</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="119"/>
         <source>Artist</source>
-        <translation type="unfinished"></translation>
+        <translation>Sanatçı</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="89"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Panoya kopyala</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="131"/>
         <source>Song</source>
-        <translation type="unfinished"></translation>
+        <translation>Şarkı</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="148"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Ara</translation>
     </message>
 </context>
 <context>
@@ -44,27 +44,27 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
         <source>Provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Sağlayan</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
         <source>Enable Media Player scanner</source>
-        <translation type="unfinished"></translation>
+        <translation>Medya oynatıcı tarayıcıyı etkinleştir</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation type="unfinished"></translation>
+        <translation>Şarkı bilgilerini almak için medya oynatıcıyı denetler. Metin değiştirmeye izin vermek için herhangi bir alanı vurgulamayın.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
         <source>Clear cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Önbelleği temizle</translation>
     </message>
 </context>
 </TS>
