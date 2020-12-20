@@ -54,12 +54,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
         <source>Enable Media Player scanner</source>
-        <translation type="unfinished"></translation>
+        <translation>Ota Media Playerin skanneri käyttöön</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hakee kappaleen tiedot Mediasoittimesta. Älä valitse mitään kenttää, jotta tekstin korvaaminen onnistuu.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
