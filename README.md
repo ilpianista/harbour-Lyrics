@@ -7,7 +7,7 @@ Currently it supports:
   * [Genius](http://genius.com)
   * [LyricsMania](http://www.lyricsmania.com)
 
-[Build status](https://build.merproject.org/package/live_build_log/home:ilpianista/harbour-lyrics/sailfish_latest_armv7hl/armv8el)
+[![Build Status](https://git.sailfishos.org/ilpianista/harbour-Lyrics/badges/master/pipeline.svg)](https://git.sailfishos.org/ilpianista/harbour-Lyrics/pipelines)
 
 ## Translations
 
