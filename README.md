@@ -7,7 +7,7 @@ Currently it supports:
   * [Genius](http://genius.com)
   * [LyricsMania](http://www.lyricsmania.com)
 
-[![Build Status](https://git.sailfishos.org/ilpianista/harbour-Lyrics/badges/master/pipeline.svg)](https://git.sailfishos.org/ilpianista/harbour-Lyrics/pipelines)
+[![Build Status](https://gitlab.com/ilpianista/harbour-Lyrics/badges/master/pipeline.svg)](https://gitlab.com/ilpianista/harbour-Lyrics/pipelines)
 
 ## Translations
 
