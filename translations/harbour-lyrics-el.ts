@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS language="el" version="2.1">
+<TS version="2.1" language="el">
 <context>
     <name>MainPage</name>
     <message>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
