@@ -52,11 +52,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-<<<<<<< HEAD
-        <location filename="../qml/pages/Settings.qml" line="55"/>
-=======
         <location filename="../qml/pages/Settings.qml" line="64"/>
->>>>>>> master
         <source>Clear cache</source>
         <translation type="unfinished"></translation>
     </message>
