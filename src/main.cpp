@@ -33,10 +33,6 @@ int main(int argc, char *argv[])
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
-    QTranslator translator;
-    translator.load(QLocale::system(), "harbour-lyrics", "-", SailfishApp::pathTo("translations").toLocalFile());
-    app->installTranslator(&translator);
-
     QCoreApplication::setApplicationName(QStringLiteral("harbour-lyrics"));
     QCoreApplication::setOrganizationDomain(QStringLiteral("andreascarpino.it"));
 
