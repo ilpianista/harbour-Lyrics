@@ -34,7 +34,7 @@
 
 #include "lyric.h"
 
-const static QString BASE_URL = QStringLiteral("http://www.lyricsmania.com");
+const static QString BASE_URL = QStringLiteral("https://www.lyricsmania.com");
 
 LyricsManiaAPI::LyricsManiaAPI(QObject *parent) :
     Provider(parent)
