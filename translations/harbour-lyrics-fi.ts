@@ -14,12 +14,12 @@
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="179"/>
+        <location filename="../qml/pages/MainPage.qml" line="180"/>
         <source>Powered by %1</source>
         <translation>Tuen toimitti %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="120"/>
         <source>Artist</source>
         <translation>Artisti</translation>
     </message>
@@ -29,12 +29,12 @@
         <translation>Kopioi leikepöydälle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="132"/>
         <source>Song</source>
         <translation>Kappale</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="148"/>
+        <location filename="../qml/pages/MainPage.qml" line="149"/>
         <source>Search</source>
         <translation>Etsi</translation>
     </message>

@@ -14,12 +14,12 @@
         <translation>Seaded</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="179"/>
+        <location filename="../qml/pages/MainPage.qml" line="180"/>
         <source>Powered by %1</source>
         <translation>Kasutab %1 tuge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="120"/>
         <source>Artist</source>
         <translation></translation>
     </message>
@@ -29,12 +29,12 @@
         <translation>Kopeeri lõikelauale</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="132"/>
         <source>Song</source>
         <translation>Lugu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="148"/>
+        <location filename="../qml/pages/MainPage.qml" line="149"/>
         <source>Search</source>
         <translation>Otsi</translation>
     </message>

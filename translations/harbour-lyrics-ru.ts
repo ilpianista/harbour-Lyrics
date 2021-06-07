@@ -14,12 +14,12 @@
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="179"/>
+        <location filename="../qml/pages/MainPage.qml" line="180"/>
         <source>Powered by %1</source>
         <translation>Источник: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="120"/>
         <source>Artist</source>
         <translation>Исполнитель</translation>
     </message>
@@ -29,12 +29,12 @@
         <translation>Скопировать в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="132"/>
         <source>Song</source>
         <translation>Песня</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="148"/>
+        <location filename="../qml/pages/MainPage.qml" line="149"/>
         <source>Search</source>
         <translation>Поиск</translation>
     </message>

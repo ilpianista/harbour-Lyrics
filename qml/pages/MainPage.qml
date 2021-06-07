@@ -116,6 +116,7 @@ Page {
                 id: artist
                 width: parent.width
                 focus: true
+                KeyNavigation.tab: song
                 placeholderText: qsTr("Artist")
 
                 onTextChanged: search.enabled = (text.length > 0 && song.text.length > 0)
