@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS language="el" version="2.1">
+<TS version="2.1" language="el">
 <context>
     <name>MainPage</name>
     <message>
@@ -14,12 +14,12 @@
         <translation>Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="179"/>
+        <location filename="../qml/pages/MainPage.qml" line="180"/>
         <source>Powered by %1</source>
         <translation>Υποστηρίζεται από% 1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="120"/>
         <source>Artist</source>
         <translation>Καλλιτέχνης</translation>
     </message>
@@ -29,12 +29,12 @@
         <translation>Αντιγραφή στο πρόχειρο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="132"/>
         <source>Song</source>
         <translation>Τραγούδι</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="148"/>
+        <location filename="../qml/pages/MainPage.qml" line="149"/>
         <source>Search</source>
         <translation>Αναζήτηση</translation>
     </message>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>

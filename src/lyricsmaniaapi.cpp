@@ -1,7 +1,7 @@
 /*
   The MIT License (MIT)
 
-  Copyright (c) 2015 Andrea Scarpino <me@andreascarpino.it>
+  Copyright (c) 2015-2021 Andrea Scarpino <andrea@scarpino.dev>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,7 @@
 
 #include "lyric.h"
 
-const static QString BASE_URL = QStringLiteral("http://www.lyricsmania.com");
+const static QString BASE_URL = QStringLiteral("https://www.lyricsmania.com");
 
 LyricsManiaAPI::LyricsManiaAPI(QObject *parent) :
     Provider(parent)
