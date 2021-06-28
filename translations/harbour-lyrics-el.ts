@@ -6,7 +6,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="76"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκαθάριση</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="70"/>
@@ -44,27 +44,27 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished">Ρυθμίσεις</translation>
+        <translation>Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="45"/>
         <source>Provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Προμηθευτής</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="66"/>
         <source>Enable Media Player scanner</source>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση σαρωτή προγράμματος αναπαραγωγής πολυμέσων</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="67"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ελέγχει το Media Player για λήψη πληροφοριών τραγουδιού. Μην εστιάζετε κανένα πεδίο για να επιτρέψετε την αντικατάσταση κειμένου.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="76"/>
         <source>Clear cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Εκκαθάριση προσωρινής μνήμης cache</translation>
     </message>
 </context>
 </TS>
