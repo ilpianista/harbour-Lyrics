@@ -2,4 +2,6 @@
 *.pro.user
 *.pro.user.*
 *.autosave
+
+rpm/*.spec
 src/geniusapi_secret.h
