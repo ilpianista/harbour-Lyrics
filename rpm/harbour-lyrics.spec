@@ -34,6 +34,24 @@ BuildRequires:  desktop-file-utils
 Music lyrics application.
 It does support: ChartLyrics, LyricsMania, Genius.
 
+%if "%{?vendor}" == "chum"
+PackageName: Lyrics
+Type: desktop-application
+DeveloperName: Andrea Scarpino
+Categories:
+ - Audio
+Custom:
+  Repo: https://gitlab.com/ilpianista/harbour-Lyrics
+Icon: https://gitlab.com/ilpianista/harbour-Lyrics/-/raw/master/icons/harbour-lyrics.svg
+Screenshots:
+ - https://gitlab.com/ilpianista/harbour-Lyrics/-/raw/master/screenshots/screenshot_1.png
+ - https://gitlab.com/ilpianista/harbour-Lyrics/-/raw/master/screenshots/screenshot_2.png
+Url:
+  Homepage: https://gitlab.com/ilpianista/harbour-Lyrics
+  Bugtracker: https://gitlab.com/ilpianista/harbour-Lyrics/-/issues
+  Donation: https://paypal.me/andreascarpino
+%endif
+
 
 %prep
 %setup -q -n %{name}-%{version}
