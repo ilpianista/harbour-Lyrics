@@ -4,37 +4,37 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="76"/>
+        <location filename="../qml/pages/MainPage.qml" line="77"/>
         <source>Clear</source>
         <translation>Limpiar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="70"/>
+        <location filename="../qml/pages/MainPage.qml" line="71"/>
         <source>Settings</source>
         <translation>Ajustes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="179"/>
+        <location filename="../qml/pages/MainPage.qml" line="193"/>
         <source>Powered by %1</source>
         <translation>Proporcionado por %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="121"/>
         <source>Artist</source>
         <translation>Artista</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="89"/>
+        <location filename="../qml/pages/MainPage.qml" line="90"/>
         <source>Copy to clipboard</source>
         <translation>Copiar al portapapeles</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="133"/>
         <source>Song</source>
         <translation>Canción</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="148"/>
+        <location filename="../qml/pages/MainPage.qml" line="150"/>
         <source>Search</source>
         <translation>Buscar</translation>
     </message>
@@ -52,17 +52,17 @@
         <translation>Proveedor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="66"/>
+        <location filename="../qml/pages/Settings.qml" line="58"/>
         <source>Enable Media Player scanner</source>
         <translation>Habilitar escaneo de Multimedia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="67"/>
+        <location filename="../qml/pages/Settings.qml" line="59"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
         <translation>Consulta el reproductor Multimedia para obtener información de la canción. No te centres en ningún campo para permitir la sustitución del texto.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="76"/>
+        <location filename="../qml/pages/Settings.qml" line="68"/>
         <source>Clear cache</source>
         <translation>Limpiar caché</translation>
     </message>

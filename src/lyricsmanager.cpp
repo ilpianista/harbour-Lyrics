@@ -1,7 +1,7 @@
 /*
   The MIT License (MIT)
 
-  Copyright (c) 2015-2021 Andrea Scarpino <andrea@scarpino.dev>
+  Copyright (c) 2015-2022 Andrea Scarpino <andrea@scarpino.dev>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -31,13 +31,11 @@
 #include <QStandardPaths>
 
 #include "chartlyricsapi.h"
-#include "mediaplayerscanner.h"
 #include "provider.h"
 
 LyricsManager::LyricsManager(QObject *parent) :
     QObject(parent)
   , api(0)
-  , mpScanner(0)
 {
     settings = new QSettings(QCoreApplication::applicationName(), QCoreApplication::applicationName(), this);
 
@@ -49,7 +47,6 @@ LyricsManager::~LyricsManager()
 {
     delete settings;
     delete api;
-    delete mpScanner;
 }
 
 void LyricsManager::clearCache()
@@ -138,13 +135,5 @@ bool LyricsManager::getMediaPlayerScanner() const
 
 void LyricsManager::setMediaPlayerScanner(const bool enabled)
 {
-    if (enabled) {
-        mpScanner = new MediaPlayerScanner();
-        connect(mpScanner, &MediaPlayerScanner::mediaPlayerInfo, this, &LyricsManager::mediaPlayerInfo);
-    } else if (mpScanner) {
-        delete mpScanner;
-        mpScanner = 0;
-    }
-
     settings->setValue("MediaPlayerScanner", enabled);
 }

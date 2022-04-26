@@ -4,37 +4,37 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="76"/>
+        <location filename="../qml/pages/MainPage.qml" line="77"/>
         <source>Clear</source>
         <translation>Wissen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="70"/>
+        <location filename="../qml/pages/MainPage.qml" line="71"/>
         <source>Settings</source>
         <translation>Instellingen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="179"/>
+        <location filename="../qml/pages/MainPage.qml" line="193"/>
         <source>Powered by %1</source>
         <translation>Aangedreven door %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="121"/>
         <source>Artist</source>
         <translation>Artiest</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="89"/>
+        <location filename="../qml/pages/MainPage.qml" line="90"/>
         <source>Copy to clipboard</source>
         <translation>Kopiëren naar klembord</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="131"/>
+        <location filename="../qml/pages/MainPage.qml" line="133"/>
         <source>Song</source>
         <translation>Nummer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="148"/>
+        <location filename="../qml/pages/MainPage.qml" line="150"/>
         <source>Search</source>
         <translation>Zoeken</translation>
     </message>
@@ -52,17 +52,17 @@
         <translation>Dienst</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="66"/>
+        <location filename="../qml/pages/Settings.qml" line="58"/>
         <source>Enable Media Player scanner</source>
         <translation>Mediaspelerscanner inschakelen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="67"/>
+        <location filename="../qml/pages/Settings.qml" line="59"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
         <translation>Controleert de mediaspeler om informatie over nummers op te halen. Focus niet op een veld om tekstvervanging toe te staan.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="76"/>
+        <location filename="../qml/pages/Settings.qml" line="68"/>
         <source>Clear cache</source>
         <translation>Cache wissen</translation>
     </message>

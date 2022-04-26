@@ -1,7 +1,7 @@
 /*
   The MIT License (MIT)
 
-  Copyright (c) 2014-2021 Andrea Scarpino <andrea@scarpino.dev>
+  Copyright (c) 2014-2022 Andrea Scarpino <andrea@scarpino.dev>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -24,12 +24,12 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Amber.Mpris 1.0
 
 Page {
-
     allowedOrientations: Orientation.All
 
-    property bool userTyping: false;
+    property bool userTyping: false
 
     Connections {
         target: manager
@@ -49,15 +49,16 @@ Page {
                 songText.text = "Not found :-("
             }
         }
+    }
 
-        onMediaPlayerInfo: {
-            console.log("Fetched song informations from Media Player");
-            if (!userTyping) {
-                artist.text = songArtist;
-                song.text = songTitle;
-                searchLyric();
-            }
-        }
+    Connections {
+        target: mprisController.metaData
+
+        onTitleChanged: mpris()
+    }
+
+    MprisController {
+        id: mprisController
     }
 
     SilicaFlickable {
@@ -175,9 +176,23 @@ Page {
         manager.search(artist.text.trim(), song.text.trim());
     }
 
+    function mpris() {
+        if (manager.getMediaPlayerScanner()) {
+            console.log("Fetched song informations from " + mprisController.currentService);
+
+            if (!userTyping && mprisController.metaData) {
+                artist.text = mprisController.metaData.contributingArtist;
+                song.text = mprisController.metaData.title;
+                searchLyric();
+            }
+        }
+    }
+
     onStatusChanged: {
         if (status === PageStatus.Active) {
             poweredBy.text = qsTr("Powered by %1").arg(manager.getProvider());
+
+            mpris();
         }
     }
 }
