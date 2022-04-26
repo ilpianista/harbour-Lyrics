@@ -6,3 +6,8 @@ Icon=harbour-lyrics
 Exec=harbour-lyrics
 Name=Lyrics
 Comment=Music lyrics application
+
+[X-Sailjail]
+Permissions=Internet
+OrganizationName=it.andreascarpino
+ApplicationName=harbour-lyrics
