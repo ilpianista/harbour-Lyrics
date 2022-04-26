@@ -94,8 +94,6 @@ void LyricsManiaAPI::onGetLyricPageResult()
         } else {
             // Remove the video div
             lyricbox.findFirst(QStringLiteral("div")).removeFromDocument();
-            // Remove the song title
-            lyricbox.findFirst(QStringLiteral("strong")).removeFromDocument();
 
             lyric = lyrics.take(reply);
 
