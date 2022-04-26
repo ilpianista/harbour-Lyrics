@@ -1,7 +1,7 @@
 /*
   The MIT License (MIT)
 
-  Copyright (c) 2015-2021 Andrea Scarpino <andrea@scarpino.dev>
+  Copyright (c) 2015-2022 Andrea Scarpino <andrea@scarpino.dev>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,6 @@
 
 class QSettings;
 class Provider;
-class MediaPlayerScanner;
 
 class LyricsManager : public QObject
 {
@@ -50,7 +49,6 @@ public:
 
 Q_SIGNALS:
     void searchResult(Lyric *lyric, const bool &found);
-    void mediaPlayerInfo(const QString &songArtist, const QString &songTitle);
 
 private:
     QString getLyricsDir() const;
@@ -58,7 +56,6 @@ private:
 
     QSettings *settings;
     Provider *api;
-    MediaPlayerScanner *mpScanner;
 
 };
 

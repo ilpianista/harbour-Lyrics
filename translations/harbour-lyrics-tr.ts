@@ -4,37 +4,37 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="76"/>
+        <location filename="../qml/pages/MainPage.qml" line="77"/>
         <source>Clear</source>
         <translation>Temizle</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="70"/>
+        <location filename="../qml/pages/MainPage.qml" line="71"/>
         <source>Settings</source>
         <translation>Ayarlar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="180"/>
+        <location filename="../qml/pages/MainPage.qml" line="193"/>
         <source>Powered by %1</source>
         <translation>%1 tarafından sağlanıyor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="120"/>
+        <location filename="../qml/pages/MainPage.qml" line="121"/>
         <source>Artist</source>
         <translation>Sanatçı</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="89"/>
+        <location filename="../qml/pages/MainPage.qml" line="90"/>
         <source>Copy to clipboard</source>
         <translation>Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="132"/>
+        <location filename="../qml/pages/MainPage.qml" line="133"/>
         <source>Song</source>
         <translation>Şarkı</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="149"/>
+        <location filename="../qml/pages/MainPage.qml" line="150"/>
         <source>Search</source>
         <translation>Ara</translation>
     </message>

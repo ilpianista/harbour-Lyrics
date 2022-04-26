@@ -4,37 +4,37 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="76"/>
+        <location filename="../qml/pages/MainPage.qml" line="77"/>
         <source>Clear</source>
         <translation>Εκκαθάριση</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="70"/>
+        <location filename="../qml/pages/MainPage.qml" line="71"/>
         <source>Settings</source>
         <translation>Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="180"/>
+        <location filename="../qml/pages/MainPage.qml" line="193"/>
         <source>Powered by %1</source>
         <translation>Υποστηρίζεται από% 1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="120"/>
+        <location filename="../qml/pages/MainPage.qml" line="121"/>
         <source>Artist</source>
         <translation>Καλλιτέχνης</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="89"/>
+        <location filename="../qml/pages/MainPage.qml" line="90"/>
         <source>Copy to clipboard</source>
         <translation>Αντιγραφή στο πρόχειρο</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="132"/>
+        <location filename="../qml/pages/MainPage.qml" line="133"/>
         <source>Song</source>
         <translation>Τραγούδι</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="149"/>
+        <location filename="../qml/pages/MainPage.qml" line="150"/>
         <source>Search</source>
         <translation>Αναζήτηση</translation>
     </message>

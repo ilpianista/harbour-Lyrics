@@ -55,6 +55,7 @@ PkgConfigBR:
 # Runtime dependencies which are not automatically detected
 Requires:
   - sailfishsilica-qt5 >= 0.10.9
+  - qml(Amber.Mpris)
 
 # All installed files
 Files:
