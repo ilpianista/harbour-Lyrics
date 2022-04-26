@@ -102,7 +102,7 @@ void LyricsManager::storeLyric(Lyric *lyric, const bool &found)
 {
     if (found) {
         qDebug() << "Caching lyric by" << lyric->artist() << lyric->song();
-        QFile f(getLyricsDir() + lyric->artist() + "_" + lyric->song() + ".txt");
+        QFile f(getLyricsDir() + lyric->artist().toLower() + "_" + lyric->song().toLower() + ".txt");
         f.open(QIODevice::WriteOnly);
         f.write(lyric->text().toLatin1());
         f.close();
@@ -111,7 +111,7 @@ void LyricsManager::storeLyric(Lyric *lyric, const bool &found)
 
 void LyricsManager::search(const QString &artist, const QString &song)
 {
-    QFile f(getLyricsDir() + artist + "_" + song + ".txt");
+    QFile f(getLyricsDir() + artist.toLower() + "_" + song.toLower() + ".txt");
     if (f.exists()) {
         f.open(QIODevice::ReadOnly);
 
