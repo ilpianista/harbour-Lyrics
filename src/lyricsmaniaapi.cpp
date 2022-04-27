@@ -44,8 +44,8 @@ LyricsManiaAPI::LyricsManiaAPI(QObject *parent) :
 
 LyricsManiaAPI::~LyricsManiaAPI()
 {
-    qDeleteAll(lyrics.keys());
-    qDeleteAll(lyrics.values());
+    qDeleteAll(lyrics.keyBegin(), lyrics.keyEnd());
+    qDeleteAll(lyrics);
     delete network;
 }
 
@@ -58,7 +58,7 @@ void LyricsManiaAPI::getLyric(const QString &artist, const QString &song)
     QString songNoSpaces(song.toLower());
     songNoSpaces.replace(QChar::Space, QChar::fromLatin1('_'));
 
-    QUrl url(BASE_URL + QStringLiteral("/%1_lyrics_%2.html").arg(songNoSpaces).arg(artNoSpaces));
+    QUrl url(BASE_URL + QStringLiteral("/%1_lyrics_%2.html").arg(songNoSpaces, artNoSpaces));
     qDebug() << url;
 
     QNetworkRequest req(url);

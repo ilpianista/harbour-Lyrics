@@ -49,8 +49,8 @@ GeniusAPI::GeniusAPI(QObject *parent) :
 
 GeniusAPI::~GeniusAPI()
 {
-    qDeleteAll(lyrics.keys());
-    qDeleteAll(lyrics.values());
+    qDeleteAll(lyrics.keyBegin(), lyrics.keyEnd());
+    qDeleteAll(lyrics);
     delete network;
 }
 
