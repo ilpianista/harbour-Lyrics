@@ -93,7 +93,7 @@ void GeniusAPI::onGetLyricResult()
     bool err = true;
 
     if (reply->error() != QNetworkReply::NoError) {
-        qCritical() << "Cannot fetch lyric";
+        qCritical() << "Cannot fetch lyric:" << reply->errorString();
     } else {
         QJsonDocument json = QJsonDocument::fromJson(reply->readAll());
 

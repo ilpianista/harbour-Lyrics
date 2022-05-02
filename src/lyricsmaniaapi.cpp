@@ -80,7 +80,7 @@ void LyricsManiaAPI::onGetLyricPageResult()
     Lyric* lyric = 0;
 
     if (reply->error() != QNetworkReply::NoError) {
-        qCritical() << "Cannot fetch lyric";
+        qCritical() << "Cannot fetch lyric:" << reply->errorString();
     } else {
         QWebPage page;
         page.settings()->setAttribute(QWebSettings::AutoLoadImages, false);
