@@ -52,17 +52,17 @@
         <translation>Servizio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="66"/>
+        <location filename="../qml/pages/Settings.qml" line="69"/>
         <source>Enable Media Player scanner</source>
         <translation>Abilita riconoscimento automatico</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="67"/>
+        <location filename="../qml/pages/Settings.qml" line="70"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
         <translation>Ottiene le informazioni del brano dal lettore multimediale. Non posizionare il cursore in nessun campo di testo in modo da permettere la compilazione automatica.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="76"/>
+        <location filename="../qml/pages/Settings.qml" line="79"/>
         <source>Clear cache</source>
         <translation>Pulisci cache</translation>
     </message>

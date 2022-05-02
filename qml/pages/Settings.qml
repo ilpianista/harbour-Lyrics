@@ -45,6 +45,9 @@ Page {
             label: qsTr("Provider")
 
             menu: ContextMenu {
+                MenuItem {
+                    text: "AZLyrics"
+                }
 
                 MenuItem {
                     text: "ChartLyrics"
@@ -82,12 +85,14 @@ Page {
 
     Component.onCompleted: {
         var api = manager.getProvider();
-        if (api === "ChartLyrics") {
+        if (api === "AZLyrics") {
             provider.currentIndex = 0;
-        } else if (api === "Genius") {
+        } else if (api === "ChartLyrics") {
             provider.currentIndex = 1;
-        } else {
+        } else if (api === "Genius") {
             provider.currentIndex = 2;
+        } else {
+            provider.currentIndex = 3;
         }
 
         scanner.checked = manager.getMediaPlayerScanner();
@@ -96,9 +101,10 @@ Page {
     onStatusChanged: {
         if (status === PageStatus.Deactivating) {
             switch (provider.currentIndex) {
-            case 0: manager.setProvider("ChartLyrics"); break;
-            case 1: manager.setProvider("Genius"); break;
-            case 2:
+            case 0: manager.setProvider("AZLyrics"); break;
+            case 1: manager.setProvider("ChartLyrics"); break;
+            case 2: manager.setProvider("Genius"); break;
+            case 3:
             default: manager.setProvider("LyricsMania");
             }
         }

@@ -52,17 +52,17 @@
         <translation>Proveedor</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="66"/>
+        <location filename="../qml/pages/Settings.qml" line="69"/>
         <source>Enable Media Player scanner</source>
         <translation>Habilitar escaneo de Multimedia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="67"/>
+        <location filename="../qml/pages/Settings.qml" line="70"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
         <translation>Consulta el reproductor Multimedia para obtener información de la canción. No te centres en ningún campo para permitir la sustitución del texto.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="76"/>
+        <location filename="../qml/pages/Settings.qml" line="79"/>
         <source>Clear cache</source>
         <translation>Limpiar caché</translation>
     </message>

@@ -52,17 +52,17 @@
         <translation>Dienst</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="66"/>
+        <location filename="../qml/pages/Settings.qml" line="69"/>
         <source>Enable Media Player scanner</source>
         <translation>Mediaspelerscanner inschakelen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="67"/>
+        <location filename="../qml/pages/Settings.qml" line="70"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
         <translation>Controleert de mediaspeler voor informatie over liedjes op te halen. Zorgt dat ge niet op een veld focust voor tekstvervanging toe te laten.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="76"/>
+        <location filename="../qml/pages/Settings.qml" line="79"/>
         <source>Clear cache</source>
         <translation>Cachegeheugen wissen</translation>
     </message>

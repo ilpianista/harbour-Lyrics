@@ -30,6 +30,7 @@
 #include <QSettings>
 #include <QStandardPaths>
 
+#include "azlyrics.h"
 #include "chartlyricsapi.h"
 #include "geniusapi.h"
 #include "lyricsmaniaapi.h"
@@ -62,7 +63,9 @@ QString LyricsManager::getProvider() const
     QString provider;
 
     const QString className = api->metaObject()->className();
-    if (className.compare(QStringLiteral("ChartLyricsAPI")) == 0) {
+    if (className.compare(QStringLiteral("AZLyrics")) == 0) {
+        provider = "AZLyrics";
+    } else if (className.compare(QStringLiteral("ChartLyricsAPI")) == 0) {
         provider = "ChartLyrics";
     } else if (className.compare(QStringLiteral("GeniusAPI")) == 0) {
         provider = "Genius";
@@ -81,7 +84,10 @@ void LyricsManager::setProvider(const QString &provider)
     }
 
     QString p;
-    if (provider.compare(QStringLiteral("ChartLyrics")) == 0) {
+    if (provider.compare(QStringLiteral("AZLyrics")) == 0) {
+        api = new AZLyrics;
+        p = QStringLiteral("AZLyrics");
+    } else if (provider.compare(QStringLiteral("ChartLyrics")) == 0) {
         api = new ChartLyricsAPI;
         p = QStringLiteral("ChartLyrics");
     } else if (provider.compare(QStringLiteral("Genius")) == 0) {

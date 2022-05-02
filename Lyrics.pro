@@ -9,7 +9,8 @@ SOURCES += \
     src/chartlyricsapi.cpp \
     src/geniusapi.cpp \
     src/provider.cpp \
-    src/lyricsmaniaapi.cpp
+    src/lyricsmaniaapi.cpp \
+    src/azlyrics.cpp
 
 HEADERS += \
     src/lyricsmanager.h \
@@ -19,7 +20,8 @@ HEADERS += \
     src/geniusapi.h \
     src/geniusapi_secret.h \
     src/provider.h \
-    src/lyricsmaniaapi.h
+    src/lyricsmaniaapi.h \
+    src/azlyrics.h
 
 OTHER_FILES += \
     qml/cover/CoverPage.qml \

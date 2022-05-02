@@ -52,17 +52,17 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="66"/>
+        <location filename="../qml/pages/Settings.qml" line="69"/>
         <source>Enable Media Player scanner</source>
         <translation>Luba Meediaesitaja skänner</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="67"/>
+        <location filename="../qml/pages/Settings.qml" line="70"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
         <translation>Proovib laulu teavet hankida Meediaesitajalt. Teksti asendamiseks ära vii fookust ühelegi väljale.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="76"/>
+        <location filename="../qml/pages/Settings.qml" line="79"/>
         <source>Clear cache</source>
         <translation>Puhasta vahemälu</translation>
     </message>
