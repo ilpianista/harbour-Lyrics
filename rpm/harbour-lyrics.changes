@@ -1,3 +1,8 @@
+* Mon May 2 2022 Andrea Scarpino <andrea@scarpino.dev> 0.2.0-1
+* Support SailJail
+* Port to amber MPRIS library
+* Add Lithuanian translation
+
 * Sat Jun 5 2021 Andrea Scarpino <andrea@scarpino.dev> 0.1.5-1
 - Add several translations.
 
