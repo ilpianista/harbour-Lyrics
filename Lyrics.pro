@@ -45,6 +45,7 @@ TRANSLATIONS += \
     translations/harbour-lyrics-fr_FR.ts \
     translations/harbour-lyrics-hr.ts \
     translations/harbour-lyrics-it.ts \
+    translations/harbour-lyrics-lt.ts \
     translations/harbour-lyrics-nb_NO.ts \
     translations/harbour-lyrics-nl_BE.ts \
     translations/harbour-lyrics-nl.ts \
