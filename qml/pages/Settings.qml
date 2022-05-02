@@ -54,10 +54,6 @@ Page {
                 }
 
                 MenuItem {
-                    text: "Genius"
-                }
-
-                MenuItem {
                     text: "LyricsMania"
                 }
             }

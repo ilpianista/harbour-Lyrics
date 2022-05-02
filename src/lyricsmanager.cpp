@@ -67,8 +67,6 @@ QString LyricsManager::getProvider() const
         provider = "AZLyrics";
     } else if (className.compare(QStringLiteral("ChartLyricsAPI")) == 0) {
         provider = "ChartLyrics";
-    } else if (className.compare(QStringLiteral("GeniusAPI")) == 0) {
-        provider = "Genius";
     } else {
         provider = "LyricsMania";
     }
@@ -90,9 +88,6 @@ void LyricsManager::setProvider(const QString &provider)
     } else if (provider.compare(QStringLiteral("ChartLyrics")) == 0) {
         api = new ChartLyricsAPI;
         p = QStringLiteral("ChartLyrics");
-    } else if (provider.compare(QStringLiteral("Genius")) == 0) {
-        api = new GeniusAPI;
-        p = QStringLiteral("Genius");
     } else {
         api = new LyricsManiaAPI;
         p = QStringLiteral("LyricsMania");

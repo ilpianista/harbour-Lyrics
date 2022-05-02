@@ -1,3 +1,9 @@
+* Mon May 2 2022 Andrea Scarpino <andrea@scarpino.dev> 0.5.7-1
+* Drop Genius provider
+* Support SailJail
+* Port to amber MPRIS library
+* Add Lithuanian translation
+
 * Fri Aug 6 2021 Andrea Scarpino <andrea@scarpino.dev> 0.5.6-1
 - New icon by Jorren `jsehv` Schauwaert
 - Update Greek translation
