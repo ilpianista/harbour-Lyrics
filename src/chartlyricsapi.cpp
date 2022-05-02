@@ -71,7 +71,7 @@ void ChartLyricsAPI::onGetLyricResult()
     Lyric* lyric = 0;
 
     if (reply->error() != QNetworkReply::NoError) {
-        qCritical() << "Cannot fetch lyric";
+        qCritical() << "Cannot fetch lyric:" << reply->errorString();
     } else {
         QDomDocument xml;
         QString errorMsg;
