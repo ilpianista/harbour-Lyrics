@@ -8,8 +8,6 @@ Currently it supports:
   * [Genius](https://genius.com)
   * [LyricsMania](https://www.lyricsmania.com)
 
-[![Build Status](https://gitlab.com/ilpianista/harbour-Lyrics/badges/master/pipeline.svg)](https://gitlab.com/ilpianista/harbour-Lyrics/pipelines)
-
 ## Translations
 
 [![Translation status](https://hosted.weblate.org/widgets/harbour-lyrics/-/svg-badge.svg)](https://hosted.weblate.org/engage/harbour-lyrics/?utm_source=widget)
