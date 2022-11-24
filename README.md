@@ -8,8 +8,6 @@ Currently it supports:
   * [LyricsMania](http://www.lyricsmania.com)
   * [LyricsWiki](http://lyrics.wikia.com)
 
-[![Build Status](https://git.sailfishos.org/ilpianista/harbour-Lyrics/badges/master/pipeline.svg)](https://git.sailfishos.org/ilpianista/harbour-Lyrics/pipelines)
-
 ## Translations
 
 [![Translation status](https://hosted.weblate.org/widgets/harbour-lyrics/-/svg-badge.svg)](https://hosted.weblate.org/engage/harbour-lyrics/?utm_source=widget)
