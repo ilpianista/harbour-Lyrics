@@ -41,14 +41,14 @@ Categories:
  - Audio
 Custom:
   Repo: https://github.com/ilpianista/harbour-Lyrics
-Icon: https://github.com/ilpianista/harbour-Lyrics/-/raw/master/icons/harbour-lyrics.svg
+Icon: https://raw.githubusercontent.com/ilpianista/harbour-Lyrics/master/icons/harbour-lyrics.svg
 Screenshots:
- - https://github.com/ilpianista/harbour-Lyrics/-/raw/master/screenshots/screenshot_1.png
- - https://github.com/ilpianista/harbour-Lyrics/-/raw/master/screenshots/screenshot_2.png
+ - https://raw.githubusercontent.com/ilpianista/harbour-Lyrics/master/screenshots/screenshot_1.png
+ - https://raw.githubusercontent.com/ilpianista/harbour-Lyrics/master/screenshots/screenshot_2.png
 Url:
   Homepage: https://github.com/ilpianista/harbour-Lyrics
   Bugtracker: https://github.com/ilpianista/harbour-Lyrics/-/issues
-  Donation: https://paypal.me/andreascarpino
+  Donation: https://liberapay.com/ilpianista
 %endif
 
 
