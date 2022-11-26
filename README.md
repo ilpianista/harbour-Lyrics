@@ -5,7 +5,6 @@ A music lyrics application for [Sailfish OS](https://sailfishos.org).
 Currently it supports:
   * [AZLyrics](https://www.azlyrics.com)
   * [ChartLyrics](http://chartlyrics.com)
-  * [Genius](https://genius.com)
   * [LyricsMania](https://www.lyricsmania.com)
 
 ## Translations
