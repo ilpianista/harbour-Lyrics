@@ -54,12 +54,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="69"/>
         <source>Enable Media Player scanner</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar escaneig de Multimèdia</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="70"/>
         <source>Checks Media Player to get song info. Do not focus any field to allow text substitution.</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprova el reproductor multimèdia per a obtenir informació de les cançons. No enfoqueu cap camp per a permetre la substitució de text.</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="79"/>
