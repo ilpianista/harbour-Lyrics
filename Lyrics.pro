@@ -56,8 +56,7 @@ TRANSLATIONS += \
     translations/harbour-lyrics-ru.ts \
     translations/harbour-lyrics-sr.ts \
     translations/harbour-lyrics-sv.ts \
-    translations/harbour-lyrics-tr.ts \
-    translations/harbour-lyrics-zh_Hant.ts
+    translations/harbour-lyrics-tr.ts
 
 # Genius, LyricsMania
 QT += webkitwidgets
