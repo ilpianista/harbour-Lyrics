@@ -48,7 +48,7 @@ Screenshots:
  - https://raw.githubusercontent.com/ilpianista/harbour-Lyrics/master/screenshots/screenshot_2.png
 Url:
   Homepage: https://github.com/ilpianista/harbour-Lyrics
-  Bugtracker: https://github.com/ilpianista/harbour-Lyrics/-/issues
+  Bugtracker: https://github.com/ilpianista/harbour-Lyrics/issues
   Donation: https://liberapay.com/ilpianista
 %endif
 
