@@ -9,7 +9,6 @@ SOURCES += \
     src/lyricsmanager.cpp \
     src/lyric.cpp \
     src/chartlyricsapi.cpp \
-    src/geniusapi.cpp \
     src/provider.cpp \
     src/lyricsmaniaapi.cpp \
     src/azlyrics.cpp
@@ -19,8 +18,6 @@ HEADERS += \
     src/lyric_p.h \
     src/lyric.h \
     src/chartlyricsapi.h \
-    src/geniusapi.h \
-    src/geniusapi_secret.h \
     src/provider.h \
     src/lyricsmaniaapi.h \
     src/azlyrics.h

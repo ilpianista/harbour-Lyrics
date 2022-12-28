@@ -32,7 +32,6 @@
 
 #include "azlyrics.h"
 #include "chartlyricsapi.h"
-#include "geniusapi.h"
 #include "lyricsmaniaapi.h"
 #include "provider.h"
 
