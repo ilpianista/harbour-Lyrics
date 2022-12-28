@@ -177,7 +177,7 @@ Page {
     }
 
     function mpris() {
-        if (manager.getMediaPlayerScanner()) {
+        if (manager.getMediaPlayerScanner() && mprisController.currentService) {
             console.log("Fetched song informations from " + mprisController.currentService);
 
             if (!userTyping && mprisController.metaData) {
