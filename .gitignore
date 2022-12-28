@@ -3,5 +3,3 @@
 *.pro.user.*
 *.autosave
 RPMS
-
-src/geniusapi_secret.h

@@ -12,38 +12,69 @@ on:
     branches:
       - master
 
+env:
+  RELEASE: 4.4.0.68
+  GENIUS_CLIENT_ID: ${{ secrets.GENIUS_CLIENT_ID }}
+  GENIUS_CLIENT_SECRET: ${{ secrets.GENIUS_CLIENT_SECRET }}
+  GENIUS_CLIENT_ACCESS_TOKEN: ${{ secrets.GENIUS_CLIENT_ACCESS_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Prepare
       run: mkdir output
 
     - name: Build armv7hl
       id: build_armv7hl
-      uses: coderus/github-sfos-build@master
-      with:
-        release: 4.4.0.58
+      run: |
+        docker run --rm --privileged \
+          -e GENIUS_CLIENT_ID="${GENIUS_CLIENT_ID}" \
+          -e GENIUS_CLIENT_SECRET="${GENIUS_CLIENT_SECRET}" \
+          -e GENIUS_CLIENT_ACCESS_TOKEN="${GENIUS_CLIENT_ACCESS_TOKEN}" \
+          -v $PWD:/workspace coderus/sailfishos-platform-sdk:$RELEASE /bin/bash -c "
+            mkdir -p build ;
+            cd build ;
+            cp -r /workspace/* . ;
+            mb2 -t SailfishOS-$RELEASE-armv7hl build &>/dev/null;
+            sudo mkdir -p /workspace/RPMS ;
+            sudo cp -r RPMS/*.rpm /workspace/RPMS"
 
     - name: Build i486
       id: build_i486
-      uses: coderus/github-sfos-build@master
-      with:
-        release: 4.4.0.58
-        arch: i486
+      run: |
+        docker run --rm --privileged \
+          -e GENIUS_CLIENT_ID="${GENIUS_CLIENT_ID}" \
+          -e GENIUS_CLIENT_SECRET="${GENIUS_CLIENT_SECRET}" \
+          -e GENIUS_CLIENT_ACCESS_TOKEN="${GENIUS_CLIENT_ACCESS_TOKEN}" \
+          -v $PWD:/workspace coderus/sailfishos-platform-sdk:$RELEASE /bin/bash -c "
+            mkdir -p build ;
+            cd build ;
+            cp -r /workspace/* . ;
+            mb2 -t SailfishOS-$RELEASE-i486 build &>/dev/null;
+            sudo mkdir -p /workspace/RPMS ;
+            sudo cp -r RPMS/*.rpm /workspace/RPMS"
 
     - name: Build aarch64
       id: build_aarch64
-      uses: coderus/github-sfos-build@master
-      with:
-        release: 4.4.0.58
-        arch: aarch64
+      run: |
+        docker run --rm --privileged \
+          -e GENIUS_CLIENT_ID="${GENIUS_CLIENT_ID}" \
+          -e GENIUS_CLIENT_SECRET="${GENIUS_CLIENT_SECRET}" \
+          -e GENIUS_CLIENT_ACCESS_TOKEN="${GENIUS_CLIENT_ACCESS_TOKEN}" \
+          -v $PWD:/workspace coderus/sailfishos-platform-sdk:$RELEASE /bin/bash -c "
+            mkdir -p build ;
+            cd build ;
+            cp -r /workspace/* . ;
+            mb2 -t SailfishOS-$RELEASE-aarch64 build &>/dev/null;
+            sudo mkdir -p /workspace/RPMS ;
+            sudo cp -r RPMS/*.rpm /workspace/RPMS"
 
     - name: Upload build result
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: rpms
         path: RPMS

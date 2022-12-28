@@ -90,9 +90,11 @@ void LyricsManager::setProvider(const QString &provider)
     } else if (provider.compare(QStringLiteral("ChartLyrics")) == 0) {
         api = new ChartLyricsAPI;
         p = QStringLiteral("ChartLyrics");
+#if defined(GENIUS_CLIENT_ID) && defined(GENIUS_CLIENT_SECRET) && defined(GENIUS_CLIENT_ACCESS_TOKEN)
     } else if (provider.compare(QStringLiteral("Genius")) == 0) {
         api = new GeniusAPI;
         p = QStringLiteral("Genius");
+#endif
     } else {
         api = new LyricsManiaAPI;
         p = QStringLiteral("LyricsMania");

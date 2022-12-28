@@ -20,7 +20,6 @@ HEADERS += \
     src/lyric.h \
     src/chartlyricsapi.h \
     src/geniusapi.h \
-    src/geniusapi_secret.h \
     src/provider.h \
     src/lyricsmaniaapi.h \
     src/azlyrics.h
@@ -63,3 +62,16 @@ QT += webkitwidgets
 
 # ChartLyrics
 QT += xml
+
+GENIUS_CLIENT_ID=$$(GENIUS_CLIENT_ID)
+!isEmpty(GENIUS_CLIENT_ID) {
+    DEFINES += GENIUS_CLIENT_ID=\\\"$${GENIUS_CLIENT_ID}\\\"
+}
+GENIUS_CLIENT_SECRET=$$(GENIUS_CLIENT_SECRET)
+!isEmpty(GENIUS_CLIENT_SECRET) {
+    DEFINES += GENIUS_CLIENT_SECRET=\\\"$${GENIUS_CLIENT_SECRET}\\\"
+}
+GENIUS_CLIENT_ACCESS_TOKEN=$$(GENIUS_CLIENT_ACCESS_TOKEN)
+!isEmpty(GENIUS_CLIENT_ACCESS_TOKEN) {
+    DEFINES += GENIUS_CLIENT_ACCESS_TOKEN=\\\"$${GENIUS_CLIENT_ACCESS_TOKEN}\\\"
+}

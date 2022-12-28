@@ -23,7 +23,6 @@
 */
 
 #include "geniusapi.h"
-#include "geniusapi_secret.h"
 
 #include <QDebug>
 #include <QJsonArray>
@@ -66,20 +65,23 @@ void GeniusAPI::getLyric(const QString &artist, const QString &song)
 
     QNetworkRequest req(url);
 
-    if (CLIENT_ID[0] == '\0') {
-        qCritical() << "No client id set, the request will be rejected!";
-    }
-    req.setRawHeader(QByteArray("client_id"), QByteArray(CLIENT_ID));
+#if defined(GENIUS_CLIENT_ID)
+    req.setRawHeader(QByteArray("client_id"), QByteArray(GENIUS_CLIENT_ID));
+#else
+    qCritical() << "No client id set, the request will be rejected!";
+#endif
 
-    if (CLIENT_SECRET[0] == '\0') {
-        qCritical() << "No client secret set, the request will be rejected!";
-    }
-    req.setRawHeader(QByteArray("client_secret"), QByteArray(CLIENT_SECRET));
+#if defined(GENIUS_CLIENT_SECRET)
+    req.setRawHeader(QByteArray("client_secret"), QByteArray(GENIUS_CLIENT_SECRET));
+#else
+    qCritical() << "No client secret set, the request will be rejected!";
+#endif
 
-    if (CLIENT_ACCESS_TOKEN[0] == '\0') {
-        qCritical() << "No client access token set, the request will be rejected!";
-    }
-    req.setRawHeader(QByteArray("Authorization"), QStringLiteral("Bearer %1").arg(CLIENT_ACCESS_TOKEN).toLatin1());
+#if defined(GENIUS_CLIENT_ACCESS_TOKEN)
+    req.setRawHeader(QByteArray("Authorization"), QStringLiteral("Bearer %1").arg(GENIUS_CLIENT_ACCESS_TOKEN).toLatin1());
+#else
+    qCritical() << "No client access token set, the request will be rejected!";
+#endif
 
     QNetworkReply* reply = network->get(req);
 
