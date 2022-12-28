@@ -13,7 +13,7 @@ Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
   Music lyrics application.
-  It does support: ChartLyrics, LyricsMania, Genius.
+  It does support: AZLyrics, ChartLyrics, LyricsMania, Genius.
 
   %if "%{?vendor}" == "chum"
   PackageName: Lyrics

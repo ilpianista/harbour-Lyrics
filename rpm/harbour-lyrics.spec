@@ -32,7 +32,7 @@ BuildRequires:  desktop-file-utils
 
 %description
 Music lyrics application.
-It does support: ChartLyrics, LyricsMania, Genius.
+It does support: AZLyrics, ChartLyrics, LyricsMania, Genius.
 
 %if "%{?vendor}" == "chum"
 PackageName: Lyrics
