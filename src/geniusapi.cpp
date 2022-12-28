@@ -150,10 +150,10 @@ void GeniusAPI::onGetLyricPageResult()
         page.settings()->setAttribute(QWebSettings::JavascriptEnabled, false);
         page.mainFrame()->setHtml(reply->readAll());
 
-        QWebElement lyricbox = page.mainFrame()->findFirstElement("div[class=lyrics]");
+        QWebElement lyricbox = page.mainFrame()->findFirstElement("div[id=lyrics-root] div[data-lyrics-container=true]");
 
         if (lyricbox.isNull()) {
-            qCritical() << "Cannot find lyric text in HTML page";
+            qCritical() << "Cannot find lyric box in HTML page";
         } else {
             lyric = lyrics.take(reply);
 

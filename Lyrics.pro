@@ -57,7 +57,7 @@ TRANSLATIONS += \
     translations/harbour-lyrics-sv.ts \
     translations/harbour-lyrics-tr.ts
 
-# Genius, LyricsMania
+# AZLyrics, Genius, LyricsMania
 QT += webkitwidgets
 
 # ChartLyrics
