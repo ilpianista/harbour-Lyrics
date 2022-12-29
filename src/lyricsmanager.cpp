@@ -40,7 +40,10 @@ LyricsManager::LyricsManager(QObject *parent) :
     QObject(parent)
   , api(0)
 {
-    settings = new QSettings(QCoreApplication::applicationName(), QCoreApplication::applicationName(), this);
+    const QString settingsPath =
+        QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation)
+        + "/" + QCoreApplication::applicationName() + ".conf";
+    settings = new QSettings(settingsPath, QSettings::NativeFormat);
 
     setProvider(settings->value("Provider").toString());
     setMediaPlayerScanner(settings->value("MediaPlayerScanner", true).toBool());
