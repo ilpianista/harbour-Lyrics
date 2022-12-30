@@ -1,6 +1,6 @@
 Name: harbour-lyrics
 Summary: Music lyrics application
-Version: 0.6.1
+Version: 0.6.2
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
@@ -30,7 +30,7 @@ Description: |
   Url:
     Homepage: https://github.com/ilpianista/harbour-Lyrics
     Bugtracker: https://github.com/ilpianista/harbour-Lyrics/issues
-    Donation: https://liberapay.com/ilpianista
+    Donation: https://liberapay.com/ilpianista/donate
   %endif
 Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine

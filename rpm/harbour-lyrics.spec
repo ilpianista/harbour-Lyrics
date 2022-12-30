@@ -13,7 +13,7 @@ Name:       harbour-lyrics
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Music lyrics application
-Version:    0.6.1
+Version:    0.6.2
 Release:    1
 Group:      Qt/Qt
 License:    MIT
@@ -49,7 +49,7 @@ Screenshots:
 Url:
   Homepage: https://github.com/ilpianista/harbour-Lyrics
   Bugtracker: https://github.com/ilpianista/harbour-Lyrics/issues
-  Donation: https://liberapay.com/ilpianista
+  Donation: https://liberapay.com/ilpianista/donate
 %endif
 
 
