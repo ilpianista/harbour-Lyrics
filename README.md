@@ -3,10 +3,14 @@
 A music lyrics application for [Sailfish OS](https://sailfishos.org).
 
 Currently it supports:
-  * [AZLyrics](https://www.azlyrics.com)
-  * [ChartLyrics](http://chartlyrics.com)
-  * [Genius](https://genius.com)
-  * [LyricsMania](https://www.lyricsmania.com)
+  - [AZLyrics](https://www.azlyrics.com)
+  - [ChartLyrics](http://chartlyrics.com)
+  - [Genius](https://genius.com)
+  - [LyricsMania](https://www.lyricsmania.com)
+
+## Install
+
+Install via Jolla Store, [Chum](https://github.com/sailfishos-chum/main) or [OpenRepos](https://openrepos.net/content/ilpianista/lyrics).
 
 ## Translations
 
