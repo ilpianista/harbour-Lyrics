@@ -8,6 +8,6 @@ Name=Lyrics
 Comment=Music lyrics application
 
 [X-Sailjail]
-Permissions=Internet
+Permissions=Internet;Music
 OrganizationName=it.andreascarpino
 ApplicationName=harbour-lyrics
