@@ -1,3 +1,7 @@
+* Wed May 17 2023 Andrea Scarpino <andrea@scarpino.dev> 0.2.2-1
+- Fix encoding for cached lyrics
+- Fix SailJail permissions for MPRIS support
+
 * Sat Nov 26 2022 Andrea Scarpino <andrea@scarpino.dev> 0.2.1-1
 - Fix error with rpmlint
 
