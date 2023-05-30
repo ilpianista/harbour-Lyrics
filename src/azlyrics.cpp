@@ -44,7 +44,6 @@ AZLyrics::AZLyrics(QObject *parent) :
 
 AZLyrics::~AZLyrics()
 {
-    qDeleteAll(lyrics.keyBegin(), lyrics.keyEnd());
     qDeleteAll(lyrics);
     delete network;
 }
@@ -81,6 +80,7 @@ void AZLyrics::onGetLyricPageResult()
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric:" << reply->errorString();
+        delete lyrics.take(reply);
     } else {
         QWebPage page;
         page.settings()->setAttribute(QWebSettings::AutoLoadImages, false);
@@ -91,6 +91,7 @@ void AZLyrics::onGetLyricPageResult()
 
         if (lyricbox.isNull()) {
             qCritical() << "Cannot find lyric text in HTML page";
+            delete lyrics.take(reply);
         } else {
             lyric = lyrics.take(reply);
 
