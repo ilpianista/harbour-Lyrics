@@ -48,7 +48,6 @@ GeniusAPI::GeniusAPI(QObject *parent) :
 
 GeniusAPI::~GeniusAPI()
 {
-    qDeleteAll(lyrics.keyBegin(), lyrics.keyEnd());
     qDeleteAll(lyrics);
     delete network;
 }
@@ -144,6 +143,7 @@ void GeniusAPI::onGetLyricPageResult()
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric";
+        delete lyrics.take(reply);
     } else {
         QWebPage page;
         page.settings()->setAttribute(QWebSettings::AutoLoadImages, false);
@@ -154,6 +154,7 @@ void GeniusAPI::onGetLyricPageResult()
 
         if (lyricbox.isNull()) {
             qCritical() << "Cannot find lyric box in HTML page";
+            delete lyrics.take(reply);
         } else {
             lyric = lyrics.take(reply);
 
