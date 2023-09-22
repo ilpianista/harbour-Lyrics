@@ -150,10 +150,10 @@ void GeniusAPI::onGetLyricPageResult()
         page.settings()->setAttribute(QWebSettings::JavascriptEnabled, false);
         page.mainFrame()->setHtml(reply->readAll());
 
-        QWebElement lyricbox = page.mainFrame()->findFirstElement("div[id=lyrics-root] div[data-lyrics-container=true]");
+        QWebElementCollection lyricboxs = page.mainFrame()->findAllElements("div[id=lyrics-root] div[data-lyrics-container=true]");
 
-        if (lyricbox.isNull()) {
-            qCritical() << "Cannot find lyric box in HTML page";
+        if (lyricboxs.count() == 0) {
+            qCritical() << "Cannot find lyric boxs in HTML page";
             delete lyrics.take(reply);
         } else {
             lyric = lyrics.take(reply);
@@ -161,8 +161,12 @@ void GeniusAPI::onGetLyricPageResult()
             if (!lyric) {
                 qCritical() << "Got an invalid lyric object!";
             } else {
-                lyric->setText(lyricbox.toPlainText());
+                QString text;
+                Q_FOREACH (const QWebElement e, lyricboxs) {
+                     text.append(e.toPlainText());
+                }
 
+                lyric->setText(text);
                 found = true;
             }
         }
