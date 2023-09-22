@@ -1,3 +1,6 @@
+* Fri Sep 22 2023 Andrea Scarpino <andrea@scarpino.dev> 0.2.4-1
+- Fix provider selection saving
+
 * Tue Sep 19 2023 Andrea Scarpino <andrea@scarpino.dev> 0.2.3-1
 - Fix SailJail permissions for MPRIS
 
