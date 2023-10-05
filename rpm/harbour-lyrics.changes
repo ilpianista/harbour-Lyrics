@@ -1,3 +1,6 @@
+* Thu Oct 05 2023 Andrea Scarpino <andrea@scarpino.dev> 0.6.6-1
+- Fix lyric fetching in Genius provider.
+
 * Fri Sep 22 2023 Andrea Scarpino <andrea@scarpino.dev> 0.6.5-1
 - Fix provider selection saving
 
