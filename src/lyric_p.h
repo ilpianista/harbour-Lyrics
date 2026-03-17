@@ -27,7 +27,8 @@
 
 #include <QString>
 
-struct LyricPrivate {
+struct LyricPrivate
+{
     QString artist;
     QString song;
     QString text;

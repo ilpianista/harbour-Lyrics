@@ -50,7 +50,7 @@ private:
     void getLyricText(const QUrl &url, Lyric *lyric);
 
     QNetworkAccessManager *network;
-    QMap<QNetworkReply*, Lyric*> lyrics;
+    QMap<QNetworkReply *, Lyric *> lyrics;
 };
 
 #endif // GENIUSAPI_H

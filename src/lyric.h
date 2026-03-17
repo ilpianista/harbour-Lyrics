@@ -51,7 +51,6 @@ public:
 
 private:
     LyricPrivate *d;
-
 };
 
 #endif // LYRIC_H

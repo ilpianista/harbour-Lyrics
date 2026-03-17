@@ -24,11 +24,8 @@
 
 #include "provider.h"
 
-Provider::Provider(QObject *parent) :
-    QObject(parent)
-{
-}
+Provider::Provider(QObject *parent)
+    : QObject(parent)
+{}
 
-Provider::~Provider()
-{
-}
+Provider::~Provider() {}

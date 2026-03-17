@@ -28,8 +28,8 @@ import "pages"
 
 ApplicationWindow {
 
-    initialPage: Component { MainPage { } }
+    initialPage: Component {
+        MainPage {}
+    }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
 }
-
-

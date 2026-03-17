@@ -36,13 +36,12 @@
 #include "lyricsmaniaapi.h"
 #include "provider.h"
 
-LyricsManager::LyricsManager(QObject *parent) :
-    QObject(parent)
-  , api(0)
+LyricsManager::LyricsManager(QObject *parent)
+    : QObject(parent)
+    , api(0)
 {
-    const QString settingsPath =
-        QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation)
-        + "/" + QCoreApplication::applicationName() + ".conf";
+    const QString settingsPath = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation)
+                                 + "/" + QCoreApplication::applicationName() + ".conf";
     settings = new QSettings(settingsPath, QSettings::NativeFormat);
 
     setProvider(settings->value("Provider").toString());
@@ -93,7 +92,8 @@ void LyricsManager::setProvider(const QString &provider)
     } else if (provider.compare(QStringLiteral("ChartLyrics")) == 0) {
         api = new ChartLyricsAPI;
         p = QStringLiteral("ChartLyrics");
-#if defined(GENIUS_CLIENT_ID) && defined(GENIUS_CLIENT_SECRET) && defined(GENIUS_CLIENT_ACCESS_TOKEN)
+#if defined(GENIUS_CLIENT_ID) && defined(GENIUS_CLIENT_SECRET) \
+    && defined(GENIUS_CLIENT_ACCESS_TOKEN)
     } else if (provider.compare(QStringLiteral("Genius")) == 0) {
         api = new GeniusAPI;
         p = QStringLiteral("Genius");
@@ -140,7 +140,7 @@ void LyricsManager::search(const QString &artist, const QString &song)
     if (f.exists()) {
         f.open(QIODevice::ReadOnly);
 
-        Lyric* lyric = new Lyric();
+        Lyric *lyric = new Lyric();
         lyric->setArtist(artist);
         lyric->setSong(song);
         lyric->setText(f.readAll());

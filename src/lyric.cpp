@@ -26,10 +26,10 @@
 
 #include "lyric_p.h"
 
-Lyric::Lyric(QObject *parent) : QObject(parent)
-  , d(new LyricPrivate)
-{
-}
+Lyric::Lyric(QObject *parent)
+    : QObject(parent)
+    , d(new LyricPrivate)
+{}
 
 Lyric::~Lyric()
 {

@@ -28,19 +28,18 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QUrl>
-#include <QWebPage>
 #include <QWebElement>
 #include <QWebFrame>
+#include <QWebPage>
 
 #include "lyric.h"
 
 const static QString BASE_URL = QStringLiteral("https://www.lyricsmania.com");
 
-LyricsManiaAPI::LyricsManiaAPI(QObject *parent) :
-    Provider(parent)
-  , network(new QNetworkAccessManager(this))
-{
-}
+LyricsManiaAPI::LyricsManiaAPI(QObject *parent)
+    : Provider(parent)
+    , network(new QNetworkAccessManager(this))
+{}
 
 LyricsManiaAPI::~LyricsManiaAPI()
 {
@@ -61,9 +60,9 @@ void LyricsManiaAPI::getLyric(const QString &artist, const QString &song)
     qDebug() << url;
 
     QNetworkRequest req(url);
-    QNetworkReply* reply = network->get(req);
+    QNetworkReply *reply = network->get(req);
 
-    Lyric* lyric = new Lyric();
+    Lyric *lyric = new Lyric();
     lyric->setArtist(artist);
     lyric->setSong(song);
     lyrics.insert(reply, lyric);
@@ -73,10 +72,10 @@ void LyricsManiaAPI::getLyric(const QString &artist, const QString &song)
 
 void LyricsManiaAPI::onGetLyricPageResult()
 {
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
+    QNetworkReply *reply = qobject_cast<QNetworkReply *>(QObject::sender());
 
     bool found = false;
-    Lyric* lyric = 0;
+    Lyric *lyric = 0;
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric:" << reply->errorString();

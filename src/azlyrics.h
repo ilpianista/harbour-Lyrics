@@ -47,7 +47,7 @@ private:
     void onGetLyricPageResult();
 
     QNetworkAccessManager *network;
-    QMap<QNetworkReply*, Lyric*> lyrics;
+    QMap<QNetworkReply *, Lyric *> lyrics;
 };
 
 #endif // AZLYRICS_H

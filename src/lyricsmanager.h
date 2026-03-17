@@ -56,7 +56,6 @@ private:
 
     QSettings *settings;
     Provider *api;
-
 };
 
 #endif // LYRICSMANAGER_H

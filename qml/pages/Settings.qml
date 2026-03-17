@@ -79,7 +79,7 @@ Page {
             text: qsTr("Clear cache")
             anchors.horizontalCenter: parent.horizontalCenter
 
-            onClicked: manager.clearCache();
+            onClicked: manager.clearCache()
         }
     }
 
@@ -101,11 +101,18 @@ Page {
     onStatusChanged: {
         if (status === PageStatus.Deactivating) {
             switch (provider.currentIndex) {
-            case 0: manager.setProvider("AZLyrics"); break;
-            case 1: manager.setProvider("ChartLyrics"); break;
-            case 2: manager.setProvider("Genius"); break;
+            case 0:
+                manager.setProvider("AZLyrics");
+                break;
+            case 1:
+                manager.setProvider("ChartLyrics");
+                break;
+            case 2:
+                manager.setProvider("Genius");
+                break;
             case 3:
-            default: manager.setProvider("LyricsMania");
+            default:
+                manager.setProvider("LyricsMania");
             }
         }
     }

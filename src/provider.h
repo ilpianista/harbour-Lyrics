@@ -43,7 +43,6 @@ protected:
 
 Q_SIGNALS:
     void lyricFetched(Lyric *lyric, const bool &found);
-
 };
 
 Q_DECLARE_INTERFACE(Provider, "Provider")

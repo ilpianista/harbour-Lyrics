@@ -28,19 +28,18 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QUrl>
-#include <QWebPage>
 #include <QWebElement>
 #include <QWebFrame>
+#include <QWebPage>
 
 #include "lyric.h"
 
 const static QString BASE_URL = QStringLiteral("https://www.azlyrics.com");
 
-AZLyrics::AZLyrics(QObject *parent) :
-    Provider(parent)
-  , network(new QNetworkAccessManager(this))
-{
-}
+AZLyrics::AZLyrics(QObject *parent)
+    : Provider(parent)
+    , network(new QNetworkAccessManager(this))
+{}
 
 AZLyrics::~AZLyrics()
 {
@@ -61,9 +60,9 @@ void AZLyrics::getLyric(const QString &artist, const QString &song)
     qDebug() << url;
 
     QNetworkRequest req(url);
-    QNetworkReply* reply = network->get(req);
+    QNetworkReply *reply = network->get(req);
 
-    Lyric* lyric = new Lyric();
+    Lyric *lyric = new Lyric();
     lyric->setArtist(artist);
     lyric->setSong(song);
     lyrics.insert(reply, lyric);
@@ -73,10 +72,10 @@ void AZLyrics::getLyric(const QString &artist, const QString &song)
 
 void AZLyrics::onGetLyricPageResult()
 {
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
+    QNetworkReply *reply = qobject_cast<QNetworkReply *>(QObject::sender());
 
     bool found = false;
-    Lyric* lyric = 0;
+    Lyric *lyric = 0;
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric:" << reply->errorString();
@@ -87,7 +86,12 @@ void AZLyrics::onGetLyricPageResult()
         page.settings()->setAttribute(QWebSettings::JavascriptEnabled, false);
         page.mainFrame()->setHtml(reply->readAll());
 
-        QWebElement lyricbox = page.mainFrame()->findFirstElement("div[class=ringtone]").nextSibling().nextSibling().nextSibling().nextSibling();
+        QWebElement lyricbox = page.mainFrame()
+                                   ->findFirstElement("div[class=ringtone]")
+                                   .nextSibling()
+                                   .nextSibling()
+                                   .nextSibling()
+                                   .nextSibling();
 
         if (lyricbox.isNull()) {
             qCritical() << "Cannot find lyric text in HTML page";

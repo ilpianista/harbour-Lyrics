@@ -46,7 +46,7 @@ Page {
                 songText.text = lyric.text;
                 copy.enabled = true;
             } else {
-                songText.text = "Not found :-("
+                songText.text = "Not found :-(";
             }
         }
     }
@@ -124,7 +124,7 @@ Page {
                 onActiveFocusChanged: userTyping = artist.activeFocus
 
                 EnterKey.enabled: text.length > 0 && song.text.length > 0
-                EnterKey.onClicked: searchLyric();
+                EnterKey.onClicked: searchLyric()
             }
 
             TextField {
@@ -136,7 +136,7 @@ Page {
                 onActiveFocusChanged: userTyping = song.activeFocus
 
                 EnterKey.enabled: text.length > 0 && artist.text.length > 0
-                EnterKey.onClicked: searchLyric();
+                EnterKey.onClicked: searchLyric()
             }
 
             BusyIndicator {

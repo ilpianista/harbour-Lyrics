@@ -34,13 +34,13 @@
 
 #include "lyric.h"
 
-const static QString API_URL = QStringLiteral("http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect");
+const static QString API_URL = QStringLiteral(
+    "http://api.chartlyrics.com/apiv1.asmx/SearchLyricDirect");
 
-ChartLyricsAPI::ChartLyricsAPI(QObject *parent) :
-    Provider(parent)
-  , network(new QNetworkAccessManager(this))
-{
-}
+ChartLyricsAPI::ChartLyricsAPI(QObject *parent)
+    : Provider(parent)
+    , network(new QNetworkAccessManager(this))
+{}
 
 ChartLyricsAPI::~ChartLyricsAPI()
 {
@@ -58,17 +58,17 @@ void ChartLyricsAPI::getLyric(const QString &artist, const QString &song)
     url.setQuery(query);
 
     QNetworkRequest req(url);
-    QNetworkReply* reply = network->get(req);
+    QNetworkReply *reply = network->get(req);
 
     connect(reply, &QNetworkReply::finished, this, &ChartLyricsAPI::onGetLyricResult);
 }
 
 void ChartLyricsAPI::onGetLyricResult()
 {
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
+    QNetworkReply *reply = qobject_cast<QNetworkReply *>(QObject::sender());
 
     bool found = false;
-    Lyric* lyric = 0;
+    Lyric *lyric = 0;
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric:" << reply->errorString();

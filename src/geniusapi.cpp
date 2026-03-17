@@ -40,11 +40,10 @@
 
 const static QString API_URL = QStringLiteral("https://api.genius.com");
 
-GeniusAPI::GeniusAPI(QObject *parent) :
-    Provider(parent)
-  , network(new QNetworkAccessManager(this))
-{
-}
+GeniusAPI::GeniusAPI(QObject *parent)
+    : Provider(parent)
+    , network(new QNetworkAccessManager(this))
+{}
 
 GeniusAPI::~GeniusAPI()
 {
@@ -77,19 +76,20 @@ void GeniusAPI::getLyric(const QString &artist, const QString &song)
 #endif
 
 #if defined(GENIUS_CLIENT_ACCESS_TOKEN)
-    req.setRawHeader(QByteArray("Authorization"), QStringLiteral("Bearer %1").arg(GENIUS_CLIENT_ACCESS_TOKEN).toLatin1());
+    req.setRawHeader(QByteArray("Authorization"),
+                     QStringLiteral("Bearer %1").arg(GENIUS_CLIENT_ACCESS_TOKEN).toLatin1());
 #else
     qCritical() << "No client access token set, the request will be rejected!";
 #endif
 
-    QNetworkReply* reply = network->get(req);
+    QNetworkReply *reply = network->get(req);
 
     connect(reply, &QNetworkReply::finished, this, &GeniusAPI::onGetLyricResult);
 }
 
 void GeniusAPI::onGetLyricResult()
 {
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
+    QNetworkReply *reply = qobject_cast<QNetworkReply *>(QObject::sender());
 
     bool err = true;
 
@@ -108,8 +108,9 @@ void GeniusAPI::onGetLyricResult()
                     // 'We'are lucky' like search
                     QJsonObject result = hits.at(0).toObject().value("result").toObject();
 
-                    Lyric* lyric = new Lyric();
-                    lyric->setArtist(result.value("primary_artist").toObject().value("name").toString());
+                    Lyric *lyric = new Lyric();
+                    lyric->setArtist(
+                        result.value("primary_artist").toObject().value("name").toString());
                     lyric->setSong(result.value("title").toString());
 
                     const QUrl url(result.value("url").toString());
@@ -136,10 +137,10 @@ void GeniusAPI::onGetLyricResult()
 
 void GeniusAPI::onGetLyricPageResult()
 {
-    QNetworkReply* reply = qobject_cast<QNetworkReply*>(QObject::sender());
+    QNetworkReply *reply = qobject_cast<QNetworkReply *>(QObject::sender());
 
     bool found = false;
-    Lyric* lyric = 0;
+    Lyric *lyric = 0;
 
     if (reply->error() != QNetworkReply::NoError) {
         qCritical() << "Cannot fetch lyric";
@@ -150,7 +151,8 @@ void GeniusAPI::onGetLyricPageResult()
         page.settings()->setAttribute(QWebSettings::JavascriptEnabled, false);
         page.mainFrame()->setHtml(reply->readAll());
 
-        QWebElementCollection lyricboxs = page.mainFrame()->findAllElements("div[id=lyrics-root] div[data-lyrics-container=true]");
+        QWebElementCollection lyricboxs = page.mainFrame()->findAllElements(
+            "div[id=lyrics-root] div[data-lyrics-container=true]");
 
         if (lyricboxs.count() == 0) {
             qCritical() << "Cannot find lyric boxs in HTML page";
@@ -163,7 +165,7 @@ void GeniusAPI::onGetLyricPageResult()
             } else {
                 QString text;
                 Q_FOREACH (const QWebElement e, lyricboxs) {
-                     text.append(e.toPlainText());
+                    text.append(e.toPlainText());
                 }
 
                 lyric->setText(text);
@@ -182,7 +184,7 @@ void GeniusAPI::getLyricText(const QUrl &url, Lyric *lyric)
 {
     qDebug() << "Requesting lyric page" << url.url();
     QNetworkRequest req(url);
-    QNetworkReply* reply = network->get(req);
+    QNetworkReply *reply = network->get(req);
     lyrics.insert(reply, lyric);
 
     connect(reply, &QNetworkReply::finished, this, &GeniusAPI::onGetLyricPageResult);
